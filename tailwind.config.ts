@@ -9,18 +9,26 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        border: 'hsl(var(--border))',
-        ring: 'hsl(var(--ring))',
-        background: 'hsl(var(--background))',
-        foreground: 'hsl(var(--foreground))',
-        muted: {
-          DEFAULT: 'hsl(var(--muted))',
-          foreground: 'hsl(var(--muted-foreground))',
+        foreground: {
+          DEFAULT: 'var(--foreground-bold)',
+          lightest: 'var(--foreground-lightest)',
+          light: 'var(--foreground-light)',
+          medium: 'var(--foreground-medium)',
+          // bold: 'var(--foreground-bold)',
         },
-        accent: {
-          DEFAULT: 'hsl(var(--accent))',
-          foreground: 'hsl(var(--accent-foreground))',
+        background: {
+          DEFAULT: 'var(--background-lightest)',
+          // lightest: 'var(--background-lightest)',
+          light: 'var(--background-light)',
+          medium: 'var(--background-medium)',
+          bold: 'var(--background-bold)',
+          boldest: 'var(--background-boldest)',
         },
+        border: {
+          DEFAULT: 'var(--background-boldest)',
+          light: 'var(--border-light)',
+        },
+        // ring: 'hsl(var(--ring))',
       },
     },
   },
