@@ -5,7 +5,6 @@ export const Title = () => {
   const title = "minimal index";
   const splitTitle = title.split(" ").map((word) => word.split(""));
 
-  console.log("splitTitle", splitTitle);
   return (
     <h1 className="group flex select-none gap-8 text-4xl uppercase">
       {splitTitle.map((word, wordIndex) => (
