@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { ThemeSwitcher } from "@/components/theme-switcher";
 import { Title } from "@/components/title";
+import dynamic from "next/dynamic";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,14 +21,9 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <div className="grid min-h-dvh grid-rows-[auto_1fr] gap-8 bg-background p-8 text-foreground">
-            <header className="flex items-center justify-between">
+        <ThemeProvider>
+          <div className="grid min-h-dvh grid-rows-[auto_1fr] gap-8 bg-background py-8 text-foreground">
+            <header className="flex items-center justify-between px-8">
               <Title />
               <ThemeSwitcher />
             </header>

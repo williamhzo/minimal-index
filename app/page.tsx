@@ -3,12 +3,26 @@ import { ThemeSwitcher } from "@/components/theme-switcher";
 
 export default function Home() {
   return (
-    <main className="grid place-items-center">
-      <section className="flex flex-col items-start gap-8">
-        <ListItem>A list item</ListItem>
-        <ListItem subtitle="Lil subtitle">List with subtitle</ListItem>
-        <ListItem>And another one, without</ListItem>
-      </section>
+    <main className="">
+      <div className="debug flex gap-6 overflow-x-auto px-8">
+        <Section />
+        <Section />
+        <Section />
+        <Section />
+        <Section />
+        <Section />
+      </div>
     </main>
   );
 }
+
+const Section = () => {
+  return (
+    <section className="flex shrink-0 flex-col items-start gap-8">
+      <ListItem subtitle="Architect">Álvaro Siza Vieira</ListItem>
+      <ListItem subtitle="Designer">Diter Rams</ListItem>
+      <ListItem subtitle="Designer">Eero Saarinen</ListItem>
+      <ListItem subtitle="Lil subtitle">List with subtitle</ListItem>
+    </section>
+  );
+};
