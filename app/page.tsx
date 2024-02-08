@@ -1,14 +1,14 @@
-import { ThemeSwitcher } from '@/components/theme-switcher';
+import { ListItem } from "@/components/list-item";
+import { ThemeSwitcher } from "@/components/theme-switcher";
 
 export default function Home() {
   return (
-    <main className="flex bg-background min-h-screen relative flex-col items-center justify-center">
-      <h1 className="uppercase text-2xl">minimal index</h1>
-      <p className="text-foreground-light">stay tuned...</p>
-
-      <div className="absolute bottom-4 right-4">
-        <ThemeSwitcher />
-      </div>
+    <main className="grid place-items-center">
+      <section className="flex flex-col items-start gap-8">
+        <ListItem>A list item</ListItem>
+        <ListItem subtitle="Lil subtitle">List with subtitle</ListItem>
+        <ListItem>And another one, without</ListItem>
+      </section>
     </main>
   );
 }
