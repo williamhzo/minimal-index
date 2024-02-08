@@ -4,7 +4,7 @@ import { ThemeSwitcher } from "@/components/theme-switcher";
 export default function Home() {
   return (
     <main className="">
-      <div className="debug flex gap-6 overflow-x-auto px-8">
+      <div className="flex gap-6 overflow-x-auto px-8">
         <Section />
         <Section />
         <Section />
