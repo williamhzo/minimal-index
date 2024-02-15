@@ -15,8 +15,8 @@ export const Title = () => {
               className={cn(
                 "transition-colors duration-300",
                 letterIndex === 0
-                  ? "text-foreground"
-                  : "text-background group-hover:text-foreground",
+                  ? "text-content"
+                  : "group-hover:text-content text-background",
               )}
             >
               {letter}
