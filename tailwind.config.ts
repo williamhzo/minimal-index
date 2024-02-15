@@ -7,14 +7,20 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    fontSize: {
+      sm: ["0.75rem", "1rem"],
+      base: ["0.875rem", "1.25rem"],
+      lg: ["1rem", "1.5rem"],
+      xl: ["3.375rem", "1"],
+    },
     extend: {
       colors: {
-        foreground: {
+        content: {
           DEFAULT: "var(--foreground-bold)",
           lightest: "var(--foreground-lightest)",
           light: "var(--foreground-light)",
           medium: "var(--foreground-medium)",
-          // bold: 'var(--foreground-bold)',
+          bold: "var(--foreground-bold)",
         },
         background: {
           DEFAULT: "var(--background-lightest)",
@@ -28,7 +34,6 @@ const config: Config = {
           DEFAULT: "var(--background-boldest)",
           light: "var(--border-light)",
         },
-        // ring: 'hsl(var(--ring))',
       },
     },
   },
