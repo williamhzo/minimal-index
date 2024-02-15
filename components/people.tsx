@@ -4,12 +4,23 @@ import { ListItem } from "@/components/list-item";
 import { Section } from "@/components/section";
 import { data } from "@/data";
 import { toTitleCase } from "@/utils";
-import { useSearchParams } from "next/navigation";
-import { FC } from "react";
+import { usePathname, useSearchParams } from "next/navigation";
+import { FC, useCallback } from "react";
 
 export const People: FC = () => {
+  const pathname = usePathname();
   const searchParams = useSearchParams();
   const discipline = searchParams.get("d");
+
+  const createQueryString = useCallback(
+    (name: string, value: string) => {
+      const params = new URLSearchParams(searchParams.toString());
+      params.set(name, value);
+
+      return params.toString();
+    },
+    [searchParams],
+  );
 
   if (!discipline) {
     return null;
@@ -36,7 +47,7 @@ export const People: FC = () => {
         return (
           <ListItem
             key={person}
-            href={{ query: { a: person } }}
+            href={pathname + "?" + createQueryString("p", person)}
             subtitle={
               isAll
                 ? toTitleCase(findCategoryByName(person) ?? "")
