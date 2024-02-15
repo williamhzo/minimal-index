@@ -6,11 +6,11 @@ import { FC } from "react";
 
 export const Content: FC = () => {
   const searchParams = useSearchParams();
-  const person = searchParams.get("p");
+  const name = searchParams.get("p");
 
-  if (!person) {
+  if (!name) {
     return null;
   }
 
-  return <Presentation person={person} />;
+  return <Presentation name={name} />;
 };
