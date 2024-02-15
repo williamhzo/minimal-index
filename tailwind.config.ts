@@ -10,7 +10,7 @@ const config: Config = {
     fontSize: {
       sm: ["0.75rem", "1rem"],
       base: ["0.875rem", "1.25rem"],
-      lg: ["1rem", "1.5rem"],
+      lg: ["2.25rem", "2.5rem"],
       xl: ["3.375rem", "1"],
     },
     extend: {
@@ -36,7 +36,11 @@ const config: Config = {
         },
       },
     },
+    transitionProperty: {
+      width: "width",
+    },
   },
   plugins: [],
 };
+
 export default config;
