@@ -1,4 +1,4 @@
-import { Content } from "@/components/Content";
+import { Content } from "@/components/Contentt";
 import { Disciplines } from "@/components/disciplines";
 import { People } from "@/components/people";
 
