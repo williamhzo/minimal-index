@@ -25,11 +25,11 @@ export const Presentation: FC<PresentationProps> = ({ name }) => {
   }
 
   const category = findCategoryByName(name);
-  const person = data[d][p];
+  // const person = data[d][p];
 
   return (
     <div>
-      <p>{p}</p>
+      <p>soon</p>
     </div>
   );
 };
