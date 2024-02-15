@@ -1,18 +1,21 @@
 import { cn } from "@/utils";
+import Link, { LinkProps } from "next/link";
 import { FC, PropsWithChildren } from "react";
 
-type ListItemProps = PropsWithChildren & {
-  subtitle?: string;
-};
+type ListItemProps = PropsWithChildren &
+  LinkProps & {
+    subtitle?: string;
+  };
 
-export const ListItem: FC<ListItemProps> = ({ children, subtitle }) => {
-  const animateClasses = "transition-colors duration-200 ";
+export const ListItem: FC<ListItemProps> = ({ children, subtitle, href }) => {
+  const animateClasses = "transition-colors duration-200";
 
   return (
-    <button
+    <Link
+      href={href}
       className={cn(
-        "group flex w-full cursor-default gap-2 border-b border-background-light py-3 text-content-light",
-        "hover:text-content-medium focus:border-border focus:text-content-bold focus-visible:outline-none",
+        "group relative flex w-full gap-2 py-3 text-content-light",
+        "hover:text-content-medium focus:text-content-bold focus-visible:outline-none",
         animateClasses,
       )}
     >
@@ -28,6 +31,15 @@ export const ListItem: FC<ListItemProps> = ({ children, subtitle }) => {
           {subtitle}
         </span>
       )}
-    </button>
+
+      <span className="absolute bottom-0 left-0 h-px w-full bg-background-light" />
+
+      <span
+        className={cn(
+          "transition-width absolute bottom-0 left-0 h-px w-0 bg-background-boldest duration-200",
+          "group-focus:w-full",
+        )}
+      />
+    </Link>
   );
 };
