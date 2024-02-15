@@ -6,7 +6,7 @@ export const Title = () => {
   const splitTitle = title.split(" ").map((word) => word.split(""));
 
   return (
-    <h1 className="group flex select-none gap-8 text-4xl uppercase">
+    <h1 className="group flex select-none gap-8 text-lg uppercase">
       {splitTitle.map((word, wordIndex) => (
         <span key={wordIndex} className="flex gap-3">
           {word.map((letter, letterIndex) => (
@@ -16,7 +16,7 @@ export const Title = () => {
                 "transition-colors duration-300",
                 letterIndex === 0
                   ? "text-content"
-                  : "group-hover:text-content text-background",
+                  : "text-background group-hover:text-content",
               )}
             >
               {letter}
