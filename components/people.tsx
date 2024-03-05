@@ -2,7 +2,6 @@
 
 import { Column } from "@/components/column";
 import { ListItem } from "@/components/list-item";
-import { Section } from "@/components/section";
 import { disciplines, personalities } from "@/data";
 import { usePathname, useSearchParams } from "next/navigation";
 import { FC, useCallback, useMemo } from "react";

@@ -1,7 +1,6 @@
 "use client";
 
 import { ListItem } from "@/components/list-item";
-import { Section } from "@/components/section";
 import { FC } from "react";
 import { disciplines, personalities } from "@/data";
 import { Column } from "@/components/column";
