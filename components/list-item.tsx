@@ -36,7 +36,7 @@ export const ListItem: FC<ListItemProps> = ({ children, subtitle, href }) => {
 
       <span
         className={cn(
-          "transition-width absolute bottom-0 left-0 h-px w-0 bg-background-boldest duration-200",
+          "absolute bottom-0 left-0 h-px w-0 bg-background-boldest transition-width duration-200",
           "group-focus:w-full",
         )}
       />

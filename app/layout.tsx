@@ -22,7 +22,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
         <ThemeProvider>
-          <div className="grid min-h-dvh grid-rows-[auto_1fr] gap-16 bg-background py-8 text-content">
+          <div className="grid min-h-dvh grid-rows-[auto_1fr] gap-16 bg-background py-8 text-content-medium">
             <header className="flex items-center justify-between px-8">
               <Title />
               <ThemeSwitcher />

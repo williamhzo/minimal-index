@@ -3,34 +3,32 @@
 import { ListItem } from "@/components/list-item";
 import { Section } from "@/components/section";
 import { FC } from "react";
-import { data } from "@/data";
-import { toTitleCase } from "@/utils";
+import { disciplines, personalities } from "@/data";
 
 export const Disciplines: FC = () => {
-  const totalCount = Object.keys(data)
-    .reduce(
-      (acc, discipline) =>
-        acc + Object.keys(data[discipline as keyof typeof data]).length,
-      0,
-    )
-    .toString();
+  const countPersonalitiesByDiscipline = (disciplineId: string) => {
+    return personalities.filter(
+      (personality) => personality.disciplineId === disciplineId,
+    ).length;
+  };
 
   return (
     <Section className="w-64">
-      <ListItem href={{ query: { d: "all" } }} subtitle={totalCount}>
+      <ListItem
+        subtitle={personalities.length.toString()}
+        href={{ query: { d: "all" } }}
+      >
         All
       </ListItem>
 
-      {Object.keys(data).map((discipline: string) => {
+      {disciplines.map((discipline) => {
         return (
           <ListItem
-            key={discipline}
-            href={{ query: { d: discipline } }}
-            subtitle={Object.keys(
-              data[discipline as keyof typeof data],
-            ).length.toString()}
+            key={discipline.id}
+            subtitle={countPersonalitiesByDiscipline(discipline.id).toString()}
+            href={{ query: { d: discipline.id } }}
           >
-            {toTitleCase(discipline)}
+            {discipline.name}
           </ListItem>
         );
       })}
