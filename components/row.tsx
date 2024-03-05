@@ -2,7 +2,7 @@ import { cn } from "@/utils";
 import { FC, PropsWithChildren } from "react";
 
 type RowProps = PropsWithChildren & {
-  rows?: 1 | 2 | 3 | 4;
+  rows?: 1 | 2 | 3 | 8;
   className?: string;
 };
 
