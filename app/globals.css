@@ -35,6 +35,17 @@
     text-wrap: balance;
   }
 
+  /* Chrome, Safari, and Opera */
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* IE, Edge, and Firefox */
+  .scrollbar-none {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
   .debug {
     outline-width: 2px;
     outline-style: solid;

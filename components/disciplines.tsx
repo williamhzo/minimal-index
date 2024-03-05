@@ -4,6 +4,7 @@ import { ListItem } from "@/components/list-item";
 import { Section } from "@/components/section";
 import { FC } from "react";
 import { disciplines, personalities } from "@/data";
+import { Column } from "@/components/column";
 
 export const Disciplines: FC = () => {
   const countPersonalitiesByDiscipline = (disciplineId: string) => {
@@ -13,7 +14,7 @@ export const Disciplines: FC = () => {
   };
 
   return (
-    <Section className="w-64">
+    <Column>
       <ListItem
         subtitle={personalities.length.toString()}
         href={{ query: { d: "all" } }}
@@ -32,6 +33,6 @@ export const Disciplines: FC = () => {
           </ListItem>
         );
       })}
-    </Section>
+    </Column>
   );
 };

@@ -1,5 +1,6 @@
 "use client";
 
+import { Column } from "@/components/column";
 import { ListItem } from "@/components/list-item";
 import { Section } from "@/components/section";
 import { disciplines, personalities } from "@/data";
@@ -42,7 +43,7 @@ export const People: FC = () => {
   const discipline = disciplines.find((d) => d.id === disciplineId)?.name ?? "";
 
   return (
-    <Section className="w-96">
+    <Column size="medium">
       {personalitiesToRender.map((personality) => {
         return (
           <ListItem
@@ -54,6 +55,6 @@ export const People: FC = () => {
           </ListItem>
         );
       })}
-    </Section>
+    </Column>
   );
 };

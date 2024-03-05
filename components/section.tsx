@@ -6,9 +6,7 @@ export const Section: FC<PropsWithChildren & { className?: string }> = ({
   className,
 }) => {
   return (
-    <section
-      className={cn("flex shrink-0 flex-col items-start gap-3", className)}
-    >
+    <section className={cn("flex shrink-0 flex-col items-start", className)}>
       {children}
     </section>
   );

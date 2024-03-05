@@ -5,7 +5,7 @@ import { Suspense } from "react";
 
 export default function Home() {
   return (
-    <div className="flex gap-6 overflow-x-auto">
+    <div className="scrollbar-none mr-56 flex h-full gap-6 overflow-x-auto">
       <Disciplines />
 
       <Suspense>
