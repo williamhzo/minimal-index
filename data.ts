@@ -55,7 +55,7 @@ export const personalities: Array<Personality> = [
     disciplineId: "artist",
     name: "Donald Judd",
     bio: {
-      image: "https://picsum.photos/200",
+      image: "https://picsum.photos/id/145/640/362",
       description:
         "Pivotal Minimalist artist, revolutionized art with his stark, geometric sculptures that redefine space and form.",
       born: "American, 1928—1994",
@@ -68,7 +68,7 @@ export const personalities: Array<Personality> = [
           id: "1",
           image: {
             alt: "",
-            url: "https://picsum.photos/200",
+            url: "https://picsum.photos/id/42/640/362",
           },
           aspectRatio: 1 / 1,
         },
@@ -82,9 +82,9 @@ export const personalities: Array<Personality> = [
           id: "3",
           image: {
             alt: "",
-            url: "https://picsum.photos/200",
+            url: "https://picsum.photos/id/35/640/362",
           },
-          aspectRatio: 3.14 / 1,
+          aspectRatio: 291 / 181,
         },
         {
           id: "4",
@@ -96,23 +96,23 @@ export const personalities: Array<Personality> = [
           id: "5",
           image: {
             alt: "",
-            url: "https://picsum.photos/200",
+            url: "https://picsum.photos/id/13/640/362",
           },
-          aspectRatio: 3.14 / 1,
+          aspectRatio: 291 / 181,
         },
         {
           id: "6",
           image: {
             alt: "",
-            url: "https://picsum.photos/200",
+            url: "https://picsum.photos/id/87/640/362",
           },
-          aspectRatio: 3.14 / 1,
+          aspectRatio: 291 / 181,
         },
         {
           id: "7",
-          title: "TODO: ADD YOUTUBE EMBED",
-          description: "Artist Lecture - Amie Siegel on Donald Judd",
-          video: "https://todo.com/",
+          title: "Artist Lecture - Amie Siegel on Donald Judd",
+          description: "2021",
+          video: "iBmHyspWGSM",
           aspectRatio: 4 / 3,
         },
       ],
@@ -121,7 +121,7 @@ export const personalities: Array<Personality> = [
           id: "8",
           image: {
             alt: "",
-            url: "https://picsum.photos/200",
+            url: "https://picsum.photos/id/60/640/362",
           },
           aspectRatio: 16 / 9,
         },
@@ -135,7 +135,7 @@ export const personalities: Array<Personality> = [
           id: "10",
           image: {
             alt: "",
-            url: "https://picsum.photos/200",
+            url: "https://picsum.photos/id/7/640/362",
           },
           aspectRatio: 2 / 3,
         },
@@ -143,14 +143,14 @@ export const personalities: Array<Personality> = [
           id: "11",
           image: {
             alt: "",
-            url: "https://picsum.photos/200",
+            url: "https://picsum.photos/id/84/640/362",
           },
           aspectRatio: 16 / 9,
         },
         {
           id: "12",
-          title: "TODO: ADD YOUTUBE EMBED",
-          description: "Judd | MoMA EXHIBITION 2020",
+          title: "Judd | MoMA EXHIBITION",
+          description: "2020",
           video: "https://todo.com/",
           aspectRatio: 4 / 3,
         },
@@ -158,9 +158,9 @@ export const personalities: Array<Personality> = [
           id: "13",
           image: {
             alt: "",
-            url: "https://picsum.photos/200",
+            url: "https://picsum.photos/id/9/640/362",
           },
-          aspectRatio: 3.14 / 1,
+          aspectRatio: 291 / 181,
         },
         {
           id: "14",
@@ -191,7 +191,7 @@ export const personalities: Array<Personality> = [
     disciplineId: "artist",
     name: "Ellsworth Kelly",
     bio: {
-      image: "https://picsum.photos/200",
+      image: "https://picsum.photos/id/10/640/362",
       description: "todo",
       born: "todo",
     },
@@ -204,7 +204,7 @@ export const personalities: Array<Personality> = [
           title: "todo",
           description: "todo",
           image: {
-            url: "https://picsum.photos/200",
+            url: "https://picsum.photos/id/11/640/362",
             alt: "",
           },
           aspectRatio: 1,
@@ -216,7 +216,7 @@ export const personalities: Array<Personality> = [
           title: "todo",
           description: "todo",
           image: {
-            url: "https://picsum.photos/200",
+            url: "https://picsum.photos/id/12/640/362",
             alt: "",
           },
           aspectRatio: 1,
@@ -229,7 +229,7 @@ export const personalities: Array<Personality> = [
     name: "Álvaro Siza Vieira",
     disciplineId: "architect",
     bio: {
-      image: "https://picsum.photos/200",
+      image: "https://picsum.photos/id/13/640/362",
       description: "todo",
       born: "todo",
     },
@@ -242,7 +242,7 @@ export const personalities: Array<Personality> = [
           title: "todo",
           description: "todo",
           image: {
-            url: "https://picsum.photos/200",
+            url: "https://picsum.photos/id/14/640/362",
             alt: "",
           },
           aspectRatio: 1,
@@ -254,7 +254,7 @@ export const personalities: Array<Personality> = [
           title: "todo",
           description: "todo",
           image: {
-            url: "https://picsum.photos/200",
+            url: "https://picsum.photos/id/15/640/362",
             alt: "",
           },
           aspectRatio: 1,
@@ -267,7 +267,7 @@ export const personalities: Array<Personality> = [
     disciplineId: "architect",
     name: "Ludwig Mies van der Rohe",
     bio: {
-      image: "https://picsum.photos/200",
+      image: "https://picsum.photos/id/16/640/362",
       description: "todo",
       born: "todo",
     },
@@ -280,7 +280,7 @@ export const personalities: Array<Personality> = [
           title: "todo",
           description: "todo",
           image: {
-            url: "https://picsum.photos/200",
+            url: "https://picsum.photos/id/17/640/362",
             alt: "",
           },
           aspectRatio: 1,
@@ -292,7 +292,7 @@ export const personalities: Array<Personality> = [
           title: "todo",
           description: "todo",
           image: {
-            url: "https://picsum.photos/200",
+            url: "https://picsum.photos/id/18/640/362",
             alt: "",
           },
           aspectRatio: 1,
@@ -305,7 +305,7 @@ export const personalities: Array<Personality> = [
     disciplineId: "designer",
     name: "Dieter Rams",
     bio: {
-      image: "https://picsum.photos/200",
+      image: "https://picsum.photos/id/19/640/362",
       description: "todo",
       born: "todo",
     },
@@ -318,7 +318,7 @@ export const personalities: Array<Personality> = [
           title: "todo",
           description: "todo",
           image: {
-            url: "https://picsum.photos/200",
+            url: "https://picsum.photos/id/20/640/362",
             alt: "",
           },
           aspectRatio: 1,
@@ -330,7 +330,7 @@ export const personalities: Array<Personality> = [
           title: "todo",
           description: "todo",
           image: {
-            url: "https://picsum.photos/200",
+            url: "https://picsum.photos/id/21/640/362",
             alt: "",
           },
           aspectRatio: 1,
@@ -343,7 +343,7 @@ export const personalities: Array<Personality> = [
     disciplineId: "designer",
     name: "Hans J. Wegner",
     bio: {
-      image: "https://picsum.photos/200",
+      image: "https://picsum.photos/id/22/640/362",
       description: "todo",
       born: "todo",
     },
@@ -356,7 +356,7 @@ export const personalities: Array<Personality> = [
           title: "todo",
           description: "todo",
           image: {
-            url: "https://picsum.photos/200",
+            url: "https://picsum.photos/id/23/640/362",
             alt: "",
           },
           aspectRatio: 1,
@@ -368,7 +368,7 @@ export const personalities: Array<Personality> = [
           title: "todo",
           description: "todo",
           image: {
-            url: "https://picsum.photos/200",
+            url: "https://picsum.photos/id/24/640/362",
             alt: "",
           },
           aspectRatio: 1,
