@@ -22,12 +22,14 @@ export const Presentation: FC<PresentationProps> = ({ personalityId }) => {
   return (
     <Column className="gap-24" size="large">
       <div className="flex gap-6">
-        <Image
-          src={personality.bio.image}
-          alt={personality.name}
-          width={192}
-          height={192}
-        />
+        <figure className="relative h-48 w-48">
+          <Image
+            src={personality.bio.image}
+            alt={personality.name}
+            layout="fill"
+            objectFit="cover"
+          />
+        </figure>
 
         <div className="flex flex-col items-start">
           <Row rows={2}>
