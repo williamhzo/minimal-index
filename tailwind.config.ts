@@ -8,10 +8,10 @@ const config: Config = {
   ],
   theme: {
     fontSize: {
-      sm: ["0.75rem", "1rem"],
-      base: ["0.875rem", "1.25rem"],
-      lg: ["2.25rem", "2.5rem"],
-      xl: ["3.375rem", "1"],
+      sm: [`var(--font-size-sm)`, `var(--line-height-sm)`],
+      base: [`var(--font-size-base)`, `var(--line-height-base)`],
+      lg: [`var(--font-size-lg)`, `var(--line-height-lg)`],
+      xl: [`var(--font-size-xl)`, `var(--line-height-xl)`],
     },
     extend: {
       colors: {

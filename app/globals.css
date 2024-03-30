@@ -4,6 +4,19 @@
 
 @layer base {
   :root {
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-base);
+
+    --font-size-sm: 0.75rem;
+    --font-size-base: 0.875rem;
+    --font-size-lg: 2.25rem;
+    --font-size-xl: 3.375rem;
+
+    --line-height-sm: 1rem;
+    --line-height-base: 1.25rem;
+    --line-height-lg: 2.5rem;
+    --line-height-xl: 1;
+
     --foreground-bold: #1a1a1a;
     --foreground-medium: #646464;
     --foreground-light: #9e9e9e;
