@@ -35,6 +35,9 @@ const config: Config = {
           light: "var(--border-light)",
         },
       },
+      transitionDuration: {
+        base: "300ms",
+      },
     },
     transitionProperty: {
       width: "width",

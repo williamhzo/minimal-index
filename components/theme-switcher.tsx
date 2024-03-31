@@ -14,7 +14,10 @@ export const ThemeSwitcher: FC<ThemeSwitcherProps> = ({ className }) => {
   return (
     <button
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-      className={cn("h-[--title-height]", className)}
+      className={cn(
+        "transition-colors duration-base text-content-light hover:text-content-medium",
+        className,
+      )}
     >
       {theme === "dark" ? <SunIcon /> : <MoonIcon />}
     </button>

@@ -15,7 +15,7 @@ export const Title = () => {
               <span
                 key={letterIndex}
                 className={cn(
-                  "transition-colors duration-300",
+                  "transition-colors duration-base",
                   letterIndex === 0
                     ? "text-content"
                     : "text-background group-hover:text-content",

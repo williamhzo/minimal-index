@@ -30,8 +30,6 @@ export default function RootLayout({
               <Title />
             </header>
 
-            <ThemeSwitcher className="fixed right-[--global-padding] top-[--global-padding] z-10" />
-
             <main className="px-[--global-padding] pt-[calc(var(--title-height)+var(--global-padding))]">
               {children}
             </main>
@@ -41,6 +39,8 @@ export default function RootLayout({
               <FooterLink href="/vote">Vote</FooterLink>
               <FooterLink href="/about">About</FooterLink>
             </footer>
+
+            <ThemeSwitcher className="fixed bottom-[--global-padding] right-[--global-padding] z-10" />
           </div>
         </ThemeProvider>
       </body>

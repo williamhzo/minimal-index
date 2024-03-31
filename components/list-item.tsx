@@ -9,7 +9,7 @@ type ListItemProps = PropsWithChildren &
   };
 
 export const ListItem: FC<ListItemProps> = ({ children, subtitle, href }) => {
-  const animateClasses = "transition-colors duration-200";
+  const animateClasses = "transition-colors duration-base";
 
   return (
     <Row className="relative">
@@ -34,11 +34,11 @@ export const ListItem: FC<ListItemProps> = ({ children, subtitle, href }) => {
           </span>
         )}
 
-        <span className="absolute bottom-0 left-0 h-px w-full bg-background-light" />
+        <span className="duration-base absolute bottom-0 left-0 h-px w-full bg-background-light" />
 
         <span
           className={cn(
-            "absolute bottom-0 left-0 h-px w-0 bg-background-boldest transition-width duration-200",
+            "duration-base absolute bottom-0 left-0 h-px w-0 bg-background-boldest transition-width",
             "group-focus:w-full",
           )}
         />

@@ -15,7 +15,7 @@ export const FooterLink: FC<FooterLinkProps> = ({ children, ...props }) => {
   return (
     <Link
       className={cn(
-        "text-sm uppercase",
+        "border-b-[0.5px] border-background-light text-sm uppercase focus-within:border-background-boldest hover:text-content-medium focus:outline-none",
         pathname === props.href ? "text-content-bold" : "text-content-light",
       )}
       {...props}
