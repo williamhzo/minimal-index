@@ -11,8 +11,6 @@ type PresentationProps = {
 };
 
 export const Presentation: FC<PresentationProps> = ({ personalityId }) => {
-  const discipline =
-    personalities.find((p) => p.id === personalityId)?.name ?? "";
   const personality = personalities.find((p) => p.id === personalityId);
 
   if (!personality) {

@@ -56,14 +56,14 @@ const ProjectRow: FC<PropsWithChildren> = ({ children }) => {
 const Project: FC<{ project: Project }> = ({ project }) => {
   if (project.image) {
     return (
-      <Image
-        className="object-cover"
-        alt={project.image.alt}
-        src={project.image.url}
-        // width={ROW_HEIGHT * project.aspectRatio}
-        // height={ROW_HEIGHT}
-        fill
-      />
+      <figure>
+        <Image
+          className="object-cover"
+          alt={project.image.alt}
+          src={project.image.url}
+          fill
+        />
+      </figure>
     );
   } else if (project.video) {
     const hasFigCaption = project.title || project.description;
@@ -122,8 +122,10 @@ const Project: FC<{ project: Project }> = ({ project }) => {
     );
   } else {
     return (
-      <div className="grid place-items-center p-6">
-        <p>{project.title}</p>
+      <div className="flex flex-col gap-1 p-6">
+        <p className="uppercase tracking-widest text-content-bold">
+          {project.title}
+        </p>
         <p>{project.description}</p>
       </div>
     );
