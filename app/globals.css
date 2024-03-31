@@ -7,6 +7,10 @@
     font-size: var(--font-size-base);
     line-height: var(--line-height-base);
 
+    --row-height: 48px;
+    --title-height: 35px;
+    --global-padding: 32px;
+
     --font-size-sm: 0.75rem;
     --font-size-base: 0.875rem;
     --font-size-lg: 2.25rem;
@@ -27,6 +31,11 @@
     --background-medium: #d9d9d9;
     --background-light: #f6f7f8;
     --background-lightest: #ffffff;
+
+    scrollbar-width: none;
+    ::-webkit-scrollbar {
+      display: none;
+    }
   }
 
   .dark {
@@ -46,17 +55,6 @@
 @layer utilities {
   .text-balance {
     text-wrap: balance;
-  }
-
-  /* Chrome, Safari, and Opera */
-  .scrollbar-none::-webkit-scrollbar {
-    display: none;
-  }
-
-  /* IE, Edge, and Firefox */
-  .scrollbar-none {
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
   }
 
   .debug {
