@@ -1,13 +1,21 @@
 "use client";
 
+import { cn } from "@/utils";
 import { useTheme } from "next-themes";
 import { FC } from "react";
 
-export const ThemeSwitcher: FC = () => {
+type ThemeSwitcherProps = {
+  className?: string;
+};
+
+export const ThemeSwitcher: FC<ThemeSwitcherProps> = ({ className }) => {
   const { theme, setTheme } = useTheme();
 
   return (
-    <button onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
+    <button
+      onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+      className={cn("h-[--title-height]", className)}
+    >
       {theme === "dark" ? <SunIcon /> : <MoonIcon />}
     </button>
   );

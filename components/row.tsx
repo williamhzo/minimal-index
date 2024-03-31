@@ -13,7 +13,7 @@ export const Row: FC<RowProps> = ({
   as = "div",
   className,
 }) => {
-  const height = rows * 48;
+  const height = `calc(${rows} * var(--row-height))`;
 
   const Component = as;
 
@@ -21,7 +21,7 @@ export const Row: FC<RowProps> = ({
     <Component
       className={cn("flex w-full items-center", className)}
       style={{
-        height: `${height}px`,
+        height,
       }}
     >
       {children}

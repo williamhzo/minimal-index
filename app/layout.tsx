@@ -23,17 +23,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={lausanne.className}>
+      <body className={lausanne.className + " bg-background"}>
         <ThemeProvider>
-          <div className="grid min-h-dvh grid-rows-[auto_1fr] gap-16 bg-background py-8 text-content-medium">
-            <header className="flex items-center justify-between px-8">
+          <div className="relative flex min-h-dvh grid-rows-[auto_1fr] gap-16 py-[--global-padding] text-content-medium">
+            <header className="fixed left-[--global-padding] top-[--global-padding] z-10">
               <Title />
-              <ThemeSwitcher />
             </header>
 
-            <main className="px-8">{children}</main>
+            <ThemeSwitcher className="fixed right-[--global-padding] top-[--global-padding] z-10" />
 
-            <footer className="flex items-center gap-6 px-8">
+            <main className="px-[--global-padding] pt-[calc(var(--title-height)+var(--global-padding))]">
+              {children}
+            </main>
+
+            <footer className="fixed bottom-[--global-padding] left-[--global-padding] z-10 flex gap-6">
               <FooterLink href="/">Influences of Minimalism</FooterLink>
               <FooterLink href="/vote">Vote</FooterLink>
               <FooterLink href="/about">About</FooterLink>
