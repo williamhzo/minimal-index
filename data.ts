@@ -194,7 +194,8 @@ export const personalities: Array<Personality> = [
     disciplineId: "artist",
     name: "Ellsworth Kelly",
     bio: {
-      image: "https://picsum.photos/id/10/640/362",
+      image:
+        "https://res.cloudinary.com/minimalindex/image/upload/v1712395037/minimal-index/ellsworth-kelly-bio.png",
       description:
         "A key figure in Minimalism, celebrated for his bold, monochromatic canvases that distill visual experience into pure color and shape.",
       born: "American, 1923—2015",
@@ -206,7 +207,7 @@ export const personalities: Array<Personality> = [
         {
           id: "1",
           image: {
-            url: "https://picsum.photos/id/11/640/362",
+            url: "https://res.cloudinary.com/minimalindex/image/upload/v1712395037/minimal-index/ellsworth-kelly-project-1-1.png",
             alt: "",
           },
           aspectRatio: 16 / 9,
@@ -214,7 +215,7 @@ export const personalities: Array<Personality> = [
         {
           id: "2",
           image: {
-            url: "https://picsum.photos/id/11/640/362",
+            url: "https://res.cloudinary.com/minimalindex/image/upload/v1712395037/minimal-index/ellsworth-kelly-project-1-2.png",
             alt: "",
           },
           aspectRatio: 16 / 9,
@@ -229,7 +230,7 @@ export const personalities: Array<Personality> = [
         {
           id: "4",
           image: {
-            url: "https://picsum.photos/id/43/640/362",
+            url: "https://res.cloudinary.com/minimalindex/image/upload/v1712395037/minimal-index/ellsworth-kelly-project-1-3.png",
             alt: "",
           },
           aspectRatio: 16 / 9,
@@ -243,7 +244,7 @@ export const personalities: Array<Personality> = [
         {
           id: "6",
           image: {
-            url: "https://picsum.photos/id/34/640/362",
+            url: "https://res.cloudinary.com/minimalindex/image/upload/v1712395037/minimal-index/ellsworth-kelly-project-1-4.png",
             alt: "",
           },
           aspectRatio: 16 / 9,
@@ -274,7 +275,7 @@ export const personalities: Array<Personality> = [
         {
           id: "8",
           image: {
-            url: "https://picsum.photos/id/12/640/362",
+            url: "https://res.cloudinary.com/minimalindex/image/upload/v1712395037/minimal-index/ellsworth-kelly-project-2-1.png",
             alt: "",
           },
           aspectRatio: 1 / 1,
@@ -288,7 +289,7 @@ export const personalities: Array<Personality> = [
         {
           id: "10",
           image: {
-            url: "https://picsum.photos/id/12/640/362",
+            url: "https://res.cloudinary.com/minimalindex/image/upload/v1712395037/minimal-index/ellsworth-kelly-project-2-2.png",
             alt: "",
           },
           aspectRatio: 1 / 1,
@@ -296,7 +297,7 @@ export const personalities: Array<Personality> = [
         {
           id: "11",
           image: {
-            url: "https://picsum.photos/id/12/640/362",
+            url: "https://res.cloudinary.com/minimalindex/image/upload/v1712395037/minimal-index/ellsworth-kelly-project-2-3.png",
             alt: "",
           },
           aspectRatio: PI_RATIO,
@@ -304,7 +305,7 @@ export const personalities: Array<Personality> = [
         {
           id: "12",
           image: {
-            url: "https://picsum.photos/id/12/640/362",
+            url: "https://res.cloudinary.com/minimalindex/image/upload/v1712395037/minimal-index/ellsworth-kelly-project-2-4.png",
             alt: "",
           },
           aspectRatio: PI_RATIO,
@@ -312,7 +313,7 @@ export const personalities: Array<Personality> = [
         {
           id: "13",
           image: {
-            url: "https://picsum.photos/id/12/640/362",
+            url: "https://res.cloudinary.com/minimalindex/image/upload/v1712395037/minimal-index/ellsworth-kelly-project-2-5.png",
             alt: "",
           },
           aspectRatio: PI_RATIO,
@@ -326,7 +327,7 @@ export const personalities: Array<Personality> = [
         {
           id: "15",
           image: {
-            url: "https://picsum.photos/id/12/640/362",
+            url: "https://res.cloudinary.com/minimalindex/image/upload/v1712395037/minimal-index/ellsworth-kelly-project-2-6.png",
             alt: "",
           },
           aspectRatio: PI_RATIO,
@@ -453,7 +454,8 @@ export const personalities: Array<Personality> = [
     disciplineId: "designer",
     name: "Hans J. Wegner",
     bio: {
-      image: "https://picsum.photos/id/22/640/362",
+      image:
+        "https://res.cloudinary.com/minimalindex/image/upload/v1712395037/minimal-index/hans-wegner-bio.png",
       description:
         "Pioneer of Danish minimalist style and wood furniture - simply one of Scandinavia's most admired designers.",
       born: "Danish, 1914—2007",
@@ -466,7 +468,7 @@ export const personalities: Array<Personality> = [
         {
           id: "1",
           image: {
-            url: "https://picsum.photos/id/23/640/362",
+            url: "https://res.cloudinary.com/minimalindex/image/upload/v1712395037/minimal-index/hans-wegner-project-1-1.png",
             alt: "",
           },
           aspectRatio: 16 / 9,
@@ -480,7 +482,7 @@ export const personalities: Array<Personality> = [
         {
           id: "3",
           image: {
-            url: "https://picsum.photos/id/23/640/362",
+            url: "https://res.cloudinary.com/minimalindex/image/upload/v1712395037/minimal-index/hans-wegner-project-1-2.png",
             alt: "",
           },
           aspectRatio: 1 / 1,
@@ -488,7 +490,7 @@ export const personalities: Array<Personality> = [
         {
           id: "4",
           image: {
-            url: "https://picsum.photos/id/23/640/362",
+            url: "https://res.cloudinary.com/minimalindex/image/upload/v1712395037/minimal-index/hans-wegner-project-1-3.png",
             alt: "",
           },
           aspectRatio: 1 / 1,
@@ -496,7 +498,7 @@ export const personalities: Array<Personality> = [
         {
           id: "5",
           image: {
-            url: "https://picsum.photos/id/23/640/362",
+            url: "https://res.cloudinary.com/minimalindex/image/upload/v1712395037/minimal-index/hans-wegner-project-1-4.png",
             alt: "",
           },
           aspectRatio: 4 / 3,
@@ -511,7 +513,7 @@ export const personalities: Array<Personality> = [
         {
           id: "7",
           image: {
-            url: "https://picsum.photos/id/23/640/362",
+            url: "https://res.cloudinary.com/minimalindex/image/upload/v1712395037/minimal-index/hans-wegner-project-1-5.png",
             alt: "",
           },
           aspectRatio: 16 / 9,
@@ -528,7 +530,7 @@ export const personalities: Array<Personality> = [
         {
           id: "9",
           image: {
-            url: "https://picsum.photos/id/23/640/362",
+            url: "https://res.cloudinary.com/minimalindex/image/upload/v1712395037/minimal-index/hans-wegner-project-2-1.png",
             alt: "",
           },
           aspectRatio: 1 / 1,
@@ -536,7 +538,7 @@ export const personalities: Array<Personality> = [
         {
           id: "10",
           image: {
-            url: "https://picsum.photos/id/23/640/362",
+            url: "https://res.cloudinary.com/minimalindex/image/upload/v1712395037/minimal-index/hans-wegner-project-2-2.png",
             alt: "",
           },
           aspectRatio: 1 / 1,
@@ -544,7 +546,7 @@ export const personalities: Array<Personality> = [
         {
           id: "11",
           image: {
-            url: "https://picsum.photos/id/23/640/362",
+            url: "https://res.cloudinary.com/minimalindex/image/upload/v1712395037/minimal-index/hans-wegner-project-2-3.png",
             alt: "",
           },
           aspectRatio: 1 / 1,
@@ -559,7 +561,7 @@ export const personalities: Array<Personality> = [
         {
           id: "13",
           image: {
-            url: "https://picsum.photos/id/23/640/362",
+            url: "https://res.cloudinary.com/minimalindex/image/upload/v1712395037/minimal-index/hans-wegner-project-2-4.png",
             alt: "",
           },
           aspectRatio: 4 / 3,
@@ -567,7 +569,7 @@ export const personalities: Array<Personality> = [
         {
           id: "14",
           image: {
-            url: "https://picsum.photos/id/23/640/362",
+            url: "https://res.cloudinary.com/minimalindex/image/upload/v1712395037/minimal-index/hans-wegner-project-2-5.png",
             alt: "",
           },
           aspectRatio: 1 / 1,
@@ -575,7 +577,7 @@ export const personalities: Array<Personality> = [
         {
           id: "15",
           image: {
-            url: "https://picsum.photos/id/23/640/362",
+            url: "https://res.cloudinary.com/minimalindex/image/upload/v1712395037/minimal-index/hans-wegner-project-2-6.png",
             alt: "",
           },
           aspectRatio: 1 / 1,
