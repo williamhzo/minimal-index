@@ -40,11 +40,9 @@ export const Presentation: FC<PresentationProps> = ({ personalityId }) => {
         </div>
       </div>
 
-      <Row>
-        <p className="flex items-start text-xl text-content-lightest">
-          <span className="text-[48px]">“</span> {personality.quote}
-        </p>
-      </Row>
+      <p className="flex items-start text-xl text-content-lightest">
+        <span className="text-[48px]">“</span> {personality.quote}
+      </p>
     </Column>
   );
 };
