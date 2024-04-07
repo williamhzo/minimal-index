@@ -57,7 +57,8 @@ export const personalities: Array<Personality> = [
     disciplineId: "artist",
     name: "Donald Judd",
     bio: {
-      image: "https://picsum.photos/id/145/640/362",
+      image:
+        "https://res.cloudinary.com/minimalindex/image/upload/v1712395009/minimal-index/donald-judd-bio.png",
       description:
         "Pivotal Minimalist artist, revolutionized art with his stark, geometric sculptures that redefine space and form.",
       born: "American, 1928—1994",
@@ -70,7 +71,7 @@ export const personalities: Array<Personality> = [
           id: "1",
           image: {
             alt: "",
-            url: "https://picsum.photos/id/42/640/362",
+            url: "https://res.cloudinary.com/minimalindex/image/upload/v1712395037/minimal-index/donald-judd-project-1-1.png",
           },
           aspectRatio: 1 / 1,
         },
@@ -84,7 +85,7 @@ export const personalities: Array<Personality> = [
           id: "3",
           image: {
             alt: "",
-            url: "https://picsum.photos/id/35/640/362",
+            url: "https://res.cloudinary.com/minimalindex/image/upload/v1712395037/minimal-index/donald-judd-project-1-2.png",
           },
           aspectRatio: PI_RATIO,
         },
@@ -98,7 +99,7 @@ export const personalities: Array<Personality> = [
           id: "5",
           image: {
             alt: "",
-            url: "https://picsum.photos/id/13/640/362",
+            url: "https://res.cloudinary.com/minimalindex/image/upload/v1712395037/minimal-index/donald-judd-project-1-3.png",
           },
           aspectRatio: PI_RATIO,
         },
@@ -106,7 +107,7 @@ export const personalities: Array<Personality> = [
           id: "6",
           image: {
             alt: "",
-            url: "https://picsum.photos/id/87/640/362",
+            url: "https://res.cloudinary.com/minimalindex/image/upload/v1712395037/minimal-index/donald-judd-project-1-4.png",
           },
           aspectRatio: PI_RATIO,
         },
@@ -123,7 +124,7 @@ export const personalities: Array<Personality> = [
           id: "8",
           image: {
             alt: "",
-            url: "https://picsum.photos/id/60/640/362",
+            url: "https://res.cloudinary.com/minimalindex/image/upload/v1712395037/minimal-index/donald-judd-project-2-1.png",
           },
           aspectRatio: 16 / 9,
         },
@@ -137,7 +138,7 @@ export const personalities: Array<Personality> = [
           id: "10",
           image: {
             alt: "",
-            url: "https://picsum.photos/id/7/640/362",
+            url: "https://res.cloudinary.com/minimalindex/image/upload/v1712395037/minimal-index/donald-judd-project-2-2.png",
           },
           aspectRatio: 2 / 3,
         },
@@ -145,7 +146,7 @@ export const personalities: Array<Personality> = [
           id: "11",
           image: {
             alt: "",
-            url: "https://picsum.photos/id/84/640/362",
+            url: "https://res.cloudinary.com/minimalindex/image/upload/v1712395037/minimal-index/donald-judd-project-2-3.png",
           },
           aspectRatio: 16 / 9,
         },
@@ -160,7 +161,7 @@ export const personalities: Array<Personality> = [
           id: "13",
           image: {
             alt: "",
-            url: "https://picsum.photos/id/9/640/362",
+            url: "https://res.cloudinary.com/minimalindex/image/upload/v1712395037/minimal-index/donald-judd-project-2-4.png",
           },
           aspectRatio: PI_RATIO,
         },
