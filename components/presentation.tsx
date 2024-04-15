@@ -24,8 +24,9 @@ export const Presentation: FC<PresentationProps> = ({ personalityId }) => {
           <Image
             src={personality.bio.image}
             alt={personality.name}
-            layout="fill"
-            objectFit="cover"
+            width={192}
+            height={192}
+            className="object-cover"
           />
         </figure>
 
