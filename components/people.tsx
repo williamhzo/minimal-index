@@ -11,14 +11,12 @@ export const People: FC = () => {
   const searchParams = useSearchParams();
   const disciplineId = searchParams.get("d");
 
-  const createQueryString = useCallback(
-    (name: string, value: string) => {
-      const params = new URLSearchParams(searchParams.toString());
-      params.set(name, value);
-      return params.toString();
-    },
-    [searchParams],
-  );
+  function createQueryString(name: string, value: string) {
+    const params = new URLSearchParams(searchParams.toString());
+    params.set(name, value);
+    params.delete("pj");
+    return params.toString();
+  }
 
   const isAll = disciplineId === "all";
 

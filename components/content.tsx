@@ -1,7 +1,7 @@
 "use client";
 
 import { Presentation } from "@/components/presentation";
-import { Projects } from "@/components/projects";
+import { ProjectsContent } from "@/components/projects";
 import { useSearchParams } from "next/navigation";
 import { FC } from "react";
 
@@ -16,7 +16,7 @@ export const Content: FC = () => {
   return (
     <div className="flex gap-6">
       <Presentation personalityId={personalityId} />
-      <Projects personalityId={personalityId} />
+      <ProjectsContent personalityId={personalityId} />
     </div>
   );
 };

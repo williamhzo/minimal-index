@@ -1,36 +1,82 @@
+"use client";
+
 import { AspectRatio } from "@/components/aspect-ratio";
+import { Column } from "@/components/column";
+import { ListItem } from "@/components/list-item";
 import { Row } from "@/components/row";
 import { Youtube } from "@/components/youtube";
-import { type Project, personalities } from "@/data";
+import { type ProjectItem, type Project, personalities } from "@/data";
 import Image from "next/image";
+import { usePathname, useSearchParams } from "next/navigation";
 import { FC, PropsWithChildren } from "react";
 
 const ROW_HEIGHT = 362;
 
-type ProjectsProps = {
-  personalityId: string;
-};
-
-export const Projects: FC<ProjectsProps> = ({ personalityId }) => {
+export const ProjectsContent: FC<{ personalityId: string }> = ({
+  personalityId,
+}) => {
   const projects = personalities.find((p) => p.id === personalityId)?.projects;
+  const searchParams = useSearchParams();
+  const projectId = searchParams.get("pj");
+  const project = projects?.find((p) => p.id === projectId);
 
   if (!projects) {
     return null;
   }
 
+  return projects.length > 1 ? (
+    <>
+      <ProjectsList projects={projects} />
+      {project && <ProjectItem project={project} />}
+    </>
+  ) : (
+    <ProjectItem project={projects[0]} />
+  );
+};
+
+const ProjectsList: FC<{ projects: Project[] }> = ({ projects }) => {
+  const searchParams = useSearchParams();
+  const pathname = usePathname();
+
+  function createQueryString(name: string, value: string) {
+    const params = new URLSearchParams(searchParams.toString());
+    params.set(name, value);
+    return params.toString();
+  }
+
+  function hasLongTitle(projects: Project[]) {
+    return projects.some((p) => p.title.length > 25);
+  }
+
+  return (
+    <Column size={hasLongTitle(projects) ? "medium" : "small"}>
+      {projects.map((p) => (
+        <ListItem
+          key={p.title}
+          href={pathname + "?" + createQueryString("pj", p.id)}
+          subtitle={p.id}
+        >
+          {p.title}
+        </ListItem>
+      ))}
+    </Column>
+  );
+};
+
+const ProjectItem: FC<{ project: Project }> = ({ project }) => {
   return (
     <div className="flex shrink-0 flex-col gap-2">
       <ProjectRow>
-        <ProjectContent projects={projects.row1} />
+        <ProjectCells projects={project.content.row1} />
       </ProjectRow>
       <ProjectRow>
-        <ProjectContent projects={projects.row2} />
+        <ProjectCells projects={project.content.row2} />
       </ProjectRow>
     </div>
   );
 };
 
-const ProjectContent: FC<{ projects: Array<Project> }> = ({ projects }) => {
+const ProjectCells: FC<{ projects: Array<ProjectItem> }> = ({ projects }) => {
   return projects.map((p) => (
     <div key={p.id} style={{ width: ROW_HEIGHT * p.aspectRatio }}>
       <AspectRatio ratio={p.aspectRatio} className="grid place-items-center">
@@ -53,7 +99,7 @@ const ProjectRow: FC<PropsWithChildren> = ({ children }) => {
   );
 };
 
-const Project: FC<{ project: Project }> = ({ project }) => {
+const Project: FC<{ project: ProjectItem }> = ({ project }) => {
   if (project.image) {
     return (
       <figure>
