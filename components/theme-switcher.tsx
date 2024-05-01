@@ -2,7 +2,7 @@
 
 import { cn } from "@/utils";
 import { useTheme } from "next-themes";
-import { FC } from "react";
+import { FC, useEffect, useState } from "react";
 
 type ThemeSwitcherProps = {
   className?: string;
@@ -10,12 +10,19 @@ type ThemeSwitcherProps = {
 
 export const ThemeSwitcher: FC<ThemeSwitcherProps> = ({ className }) => {
   const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null;
 
   return (
     <button
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
       className={cn(
-        "transition-colors duration-base text-content-light hover:text-content-medium",
+        "transition-colors text-content-light duration-base hover:text-content-medium",
         className,
       )}
     >
