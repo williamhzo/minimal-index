@@ -213,7 +213,7 @@ export const personalities: Array<Personality> = [
       born: "American, 1923—2015",
     },
     ressources: [{ label: "", subLabel: "", link: "" }],
-    quote: "The negative is just as important as the positive",
+    quote: "The negative is just \nas important as the positive",
     projects: [
       {
         id: "1",
@@ -358,12 +358,14 @@ export const personalities: Array<Personality> = [
     name: "Álvaro Siza Vieira",
     disciplineId: "architect",
     bio: {
-      image: "https://picsum.photos/id/13/640/362",
-      description: "todo",
-      born: "todo",
+      image:
+        "https://res.cloudinary.com/minimalindex/image/upload/v1714586573/alvaro-siza-vieira-bio.png",
+      description:
+        "Celebrated for his poetic modernism, masterfully blends minimalist aesthetics with organic forms in his architectural works.",
+      born: "Portuguese, born 1933",
     },
     ressources: [{ label: "", subLabel: "", link: "" }],
-    quote: "todo",
+    quote: "Architects don't\ninvent anything;\nthey transform reality",
     projects: [
       {
         id: "1988",
@@ -462,12 +464,14 @@ export const personalities: Array<Personality> = [
     disciplineId: "architect",
     name: "Ludwig Mies van der Rohe",
     bio: {
-      image: "https://picsum.photos/id/16/640/362",
-      description: "todo",
-      born: "todo",
+      image:
+        "https://res.cloudinary.com/minimalindex/image/upload/v1714586573/ludwig-mies-van-der-rohe-bio.png",
+      description:
+        "Considered by historians to be one of the most important architect of the 20th century and one whose work left a legacy in architectural theory.",
+      born: "American, born Germany. 1886-1969",
     },
     ressources: [{ label: "", subLabel: "", link: "" }],
-    quote: "todo",
+    quote: "You have to build up \nthe world you want \nto live in",
     projects: [
       {
         id: "1929",
@@ -566,12 +570,14 @@ export const personalities: Array<Personality> = [
     disciplineId: "designer",
     name: "Dieter Rams",
     bio: {
-      image: "https://picsum.photos/id/19/640/362",
-      description: "todo",
-      born: "todo",
+      image:
+        "https://res.cloudinary.com/minimalindex/image/upload/v1714586573/dieter-rams-bio.png",
+      description:
+        "Iconic figure that profoundly shaped minimalist product design with his functional, aesthetic innovations.",
+      born: "German, born 1932",
     },
     ressources: [{ label: "", subLabel: "", link: "" }],
-    quote: "todo",
+    quote: "Less, but better",
     projects: [
       {
         id: "1960",
@@ -783,12 +789,13 @@ export const personalities: Array<Personality> = [
     name: "Charlotte Perriand",
     bio: {
       image:
-        "https://res.cloudinary.com/minimalindex/image/upload/v1712395037/minimal-index/charlotte-perriand-bio.png",
-      description: "todo",
-      born: "todo",
+        "https://res.cloudinary.com/minimalindex/image/upload/v1712395037/charlotte-perriand-bio.png",
+      description:
+        "Her work redefined living spaces with the integration of the human experience, simplicity and practical elegance.",
+      born: "French, 1903-1999",
     },
     ressources: [{ label: "", subLabel: "", link: "" }],
-    quote: "todo",
+    quote: "The important thing \nis not the object but \nthe man",
     projects: [
       {
         id: "1927",
