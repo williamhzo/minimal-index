@@ -52,8 +52,8 @@ type Discipline = {
 const PI_RATIO = 291 / 181;
 
 export const disciplines: Discipline[] = [
-  { id: "artist", name: "Artist" },
   { id: "architect", name: "Architect" },
+  { id: "artist", name: "Artist" },
   { id: "designer", name: "Designer" },
 ];
 
