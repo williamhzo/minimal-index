@@ -55,6 +55,7 @@ const ProjectsList: FC<{ projects: Project[] }> = ({ projects }) => {
           key={p.title}
           href={pathname + "?" + createQueryString("pj", p.id)}
           subtitle={p.id}
+          selected={searchParams.get("pj") === p.id}
         >
           {p.title}
         </ListItem>
