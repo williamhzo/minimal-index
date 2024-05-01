@@ -2,14 +2,15 @@
 
 import { Column } from "@/components/column";
 import { ListItem } from "@/components/list-item";
-import { disciplines, personalities } from "@/data";
+import { personalities } from "@/data";
+import { FC } from "react";
+import sortBy from "lodash/sortBy";
 import { usePathname, useSearchParams } from "next/navigation";
-import { FC, useCallback, useMemo } from "react";
+import { removeAccents } from "@/utils";
 
 export const People: FC = () => {
   const pathname = usePathname();
   const searchParams = useSearchParams();
-  const disciplineId = searchParams.get("d");
 
   function createQueryString(name: string, value: string) {
     const params = new URLSearchParams(searchParams.toString());
@@ -18,35 +19,19 @@ export const People: FC = () => {
     return params.toString();
   }
 
-  const isAll = disciplineId === "all";
-
-  const personalitiesToRender = useMemo(() => {
-    const filtered =
-      disciplineId === "all"
-        ? personalities
-        : personalities.filter(
-            (personality) => personality.disciplineId === disciplineId,
-          );
-
-    return filtered.sort((a, b) =>
-      a.name.localeCompare(b.name, undefined, { sensitivity: "base" }),
-    );
-  }, [disciplineId]);
-
-  if (!disciplineId) {
-    return null;
-  }
-
-  const discipline = disciplines.find((d) => d.id === disciplineId)?.name ?? "";
+  const sortedPersonalities = sortBy(personalities, [
+    (p) => p.disciplineId,
+    (p) => removeAccents(p.name),
+  ]);
 
   return (
     <Column size="medium">
-      {personalitiesToRender.map((personality) => {
+      {sortedPersonalities.map((personality) => {
         return (
           <ListItem
             key={personality.id}
             href={pathname + "?" + createQueryString("p", personality.id)}
-            subtitle={discipline}
+            selected={searchParams.get("p") === personality.id}
           >
             {personality.name}
           </ListItem>

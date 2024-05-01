@@ -1,9 +1,9 @@
 "use client";
 
-import { ListItem } from "@/components/list-item";
-import { FC } from "react";
+import { FC, PropsWithChildren } from "react";
 import { disciplines, personalities } from "@/data";
 import { Column } from "@/components/column";
+import { Row } from "@/components/row";
 
 export const Disciplines: FC = () => {
   const countPersonalitiesByDiscipline = (disciplineId: string) => {
@@ -14,24 +14,40 @@ export const Disciplines: FC = () => {
 
   return (
     <Column>
-      <ListItem
-        subtitle={personalities.length.toString()}
-        href={{ query: { d: "all" } }}
-      >
-        All
-      </ListItem>
-
       {disciplines.map((discipline) => {
         return (
-          <ListItem
+          <Item
             key={discipline.id}
-            subtitle={countPersonalitiesByDiscipline(discipline.id).toString()}
-            href={{ query: { d: discipline.id } }}
+            count={countPersonalitiesByDiscipline(discipline.id)}
           >
             {discipline.name}
-          </ListItem>
+          </Item>
         );
       })}
     </Column>
+  );
+};
+
+const Item: FC<PropsWithChildren & { count: number }> = ({
+  children,
+  count,
+}) => {
+  return (
+    <Row className="relative items-start" rows={count}>
+      <Row rows={1} className="justify-start gap-2">
+        <p className="flex h-full items-center gap-2 text-content-light">
+          {children}
+        </p>
+        <span className="text-content-lightest">{count}</span>
+      </Row>
+
+      <span className="absolute bottom-0 left-0 h-px w-full bg-background-light duration-base" />
+
+      {/* <span
+          className={cn(
+            "absolute bottom-0 left-0 h-px w-0 bg-background-boldest transition-width duration-base",
+          )}
+        /> */}
+    </Row>
   );
 };
