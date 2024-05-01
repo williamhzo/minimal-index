@@ -5,16 +5,18 @@ import { Suspense } from "react";
 
 export default function Home() {
   return (
-    <div className="mr-12 flex h-full gap-6">
+    <div className="mr-12 flex h-full gap-0">
       <Disciplines />
 
-      <Suspense>
-        <People />
-      </Suspense>
+      <div className="flex gap-2">
+        <Suspense>
+          <People />
+        </Suspense>
 
-      <Suspense>
-        <Content />
-      </Suspense>
+        <Suspense>
+          <Content />
+        </Suspense>
+      </div>
     </div>
   );
 }
