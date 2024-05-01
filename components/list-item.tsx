@@ -6,9 +6,15 @@ import { FC, PropsWithChildren } from "react";
 type ListItemProps = PropsWithChildren &
   LinkProps & {
     subtitle?: string;
+    selected?: boolean;
   };
 
-export const ListItem: FC<ListItemProps> = ({ children, subtitle, href }) => {
+export const ListItem: FC<ListItemProps> = ({
+  children,
+  subtitle,
+  href,
+  selected,
+}) => {
   const animateClasses = "transition-colors duration-base";
 
   return (
@@ -19,27 +25,31 @@ export const ListItem: FC<ListItemProps> = ({ children, subtitle, href }) => {
           "group flex h-full w-full items-center gap-2 text-content-light",
           "hover:text-content-medium focus:text-content-bold focus-visible:outline-none",
           animateClasses,
+          selected && "text-content-bold",
         )}
       >
         {children}
+
         {subtitle && (
           <span
             className={cn(
               "text-content-lightest",
               "group-hover:text-content-light group-focus:text-content-medium",
               animateClasses,
+              selected && "text-content-medium",
             )}
           >
             {subtitle}
           </span>
         )}
 
-        <span className="duration-base absolute bottom-0 left-0 h-px w-full bg-background-light" />
+        <span className="absolute bottom-0 left-0 h-px w-full bg-background-light duration-base" />
 
         <span
           className={cn(
-            "duration-base absolute bottom-0 left-0 h-px w-0 bg-background-boldest transition-width",
+            "absolute bottom-0 left-0 h-px w-0 bg-background-boldest transition-width duration-base",
             "group-focus:w-full",
+            selected && "w-full",
           )}
         />
       </Link>
