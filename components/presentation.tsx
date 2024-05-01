@@ -20,7 +20,7 @@ export const Presentation: FC<PresentationProps> = ({ personalityId }) => {
   return (
     <Column className="gap-24" size="large">
       <div className="flex gap-6">
-        <figure className="relative h-48 w-48">
+        <figure className="relative shrink-0">
           <Image
             src={personality.bio.image}
             alt={personality.name}
@@ -32,7 +32,7 @@ export const Presentation: FC<PresentationProps> = ({ personalityId }) => {
 
         <div className="flex flex-col items-start">
           <Row rows={2}>
-            <p className="max-w-80">{personality.bio.description}</p>
+            <p>{personality.bio.description}</p>
           </Row>
 
           <Row>
@@ -41,7 +41,7 @@ export const Presentation: FC<PresentationProps> = ({ personalityId }) => {
         </div>
       </div>
 
-      <p className="flex items-start text-xl text-content-lightest">
+      <p className="flex items-start whitespace-pre-wrap text-xl text-content-lightest">
         <span className="text-[48px]">“</span> {personality.quote}
       </p>
     </Column>
