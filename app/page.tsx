@@ -8,7 +8,7 @@ export default function Home() {
     <div className="mr-12 flex h-full gap-0">
       <Disciplines />
 
-      <div className="flex gap-2">
+      <div className="flex gap-6">
         <Suspense>
           <People />
         </Suspense>
