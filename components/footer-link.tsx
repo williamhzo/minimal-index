@@ -12,11 +12,16 @@ type FooterLinkProps = PropsWithChildren & {
 export const FooterLink: FC<FooterLinkProps> = ({ children, ...props }) => {
   const pathname = usePathname();
 
+  const isActive =
+    pathname === props.href || (pathname === "/" && props.href === "/");
+
   return (
     <Link
       className={cn(
         "border-b-[0.5px] border-background-light text-sm uppercase focus-within:border-background-boldest hover:text-content-medium focus:outline-none",
-        pathname === props.href ? "text-content-bold" : "text-content-light",
+        isActive
+          ? "border-background-boldest text-content-bold"
+          : "text-content-light",
       )}
       {...props}
     >

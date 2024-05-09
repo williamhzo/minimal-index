@@ -42,12 +42,6 @@ const Item: FC<PropsWithChildren & { count: number }> = ({
       </Row>
 
       <span className="absolute bottom-0 left-0 h-px w-full bg-background-light duration-base" />
-
-      {/* <span
-          className={cn(
-            "absolute bottom-0 left-0 h-px w-0 bg-background-boldest transition-width duration-base",
-          )}
-        /> */}
     </Row>
   );
 };
