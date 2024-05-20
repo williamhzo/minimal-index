@@ -4,21 +4,9 @@ import { Column } from "@/components/column";
 import { ExternalLink } from "@/components/external-link";
 import { ListItem } from "@/components/list-item";
 import { Row } from "@/components/row";
+import { creators } from "@/data";
 import Image from "next/image";
 import { usePathname, useSearchParams } from "next/navigation";
-
-const data = {
-  micka: {
-    bio: "Award-winning Product Designer & lifelong learner I create elegant and simple solutions that delight people.",
-    portfolio: "https://micka.design/",
-    pfp: "https://picsum.photos/id/24/640/362",
-  },
-  william: {
-    bio: "Passionate Product Engineer & never-ending learner. I build intuitive, performant & accessible software.",
-    portfolio: "https://williamhzo.me/",
-    pfp: "https://picsum.photos/id/20/640/362",
-  },
-};
 
 export const CreatorsContent = () => {
   const pathname = usePathname();
@@ -30,8 +18,9 @@ export const CreatorsContent = () => {
     return params.toString();
   }
 
-  const creator = searchParams.get("c") as keyof typeof data;
-  const hasValidSearchParams = !!creator && Object.keys(data).includes(creator);
+  const creator = searchParams.get("c") as keyof typeof creators;
+  const hasValidSearchParams =
+    !!creator && Object.keys(creators).includes(creator);
 
   return (
     <section className="flex items-start gap-6">
@@ -58,7 +47,7 @@ export const CreatorsContent = () => {
             <figure className="relative flex h-48 w-48">
               <Image
                 className="object-cover"
-                src={data[creator].pfp}
+                src={creators[creator].pfp}
                 alt={`${creator}'s pfp`}
                 fill
               />
@@ -66,11 +55,11 @@ export const CreatorsContent = () => {
 
             <div>
               <Row rows={2}>
-                <p className="max-w-xs">{data[creator].bio}</p>
+                <p className="max-w-xs">{creators[creator].bio}</p>
               </Row>
 
               <Row>
-                <ExternalLink href={data[creator].portfolio}>
+                <ExternalLink href={creators[creator].portfolio}>
                   Portfolio
                 </ExternalLink>
               </Row>
