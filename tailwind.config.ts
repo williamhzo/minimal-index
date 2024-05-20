@@ -38,9 +38,9 @@ const config: Config = {
       transitionDuration: {
         base: "300ms",
       },
-    },
-    transitionProperty: {
-      width: "width",
+      transitionProperty: {
+        width: "width",
+      },
     },
   },
   plugins: [],
