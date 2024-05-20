@@ -1,6 +1,5 @@
-import { Column } from "@/components/column";
-import { ListItem } from "@/components/list-item";
+import { CreatorsContent } from "@/components/creators-content";
 
 export default function Page() {
-  return null;
+  return <CreatorsContent />;
 }
