@@ -1,5 +1,10 @@
 import { HomeContent } from "@/components/home-content";
+import { Suspense } from "react";
 
 export default function Home() {
-  return <HomeContent />;
+  return (
+    <Suspense>
+      <HomeContent />
+    </Suspense>
+  );
 }
