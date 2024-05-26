@@ -36,7 +36,6 @@ export default function RootLayout({
 
             <footer className="fixed bottom-[--global-padding] left-[--global-padding] z-10 flex gap-6">
               <FooterLink href="/">Influences of Minimalism</FooterLink>
-              <FooterLink href="/vote">Vote</FooterLink>
               <FooterLink href="/about">About</FooterLink>
             </footer>
 
