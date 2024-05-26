@@ -861,11 +861,11 @@ export const creators: Record<Creators, Creator> = {
   micka: {
     bio: "Award-winning Product Designer & lifelong learner I create elegant and simple solutions that delight people.",
     portfolio: "https://micka.design/",
-    pfp: "https://picsum.photos/id/24/640/362",
+    pfp: "https://res.cloudinary.com/minimalindex/image/upload/v1716744727/about-micka.png",
   },
   william: {
     bio: "Passionate Product Engineer & never-ending learner. I build intuitive, performant & accessible software.",
     portfolio: "https://williamhzo.me/",
-    pfp: "https://picsum.photos/id/20/640/362",
+    pfp: "https://res.cloudinary.com/minimalindex/image/upload/v1716744727/about-will.png",
   },
 };
