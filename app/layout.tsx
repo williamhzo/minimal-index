@@ -15,6 +15,12 @@ export const metadata: Metadata = {
   title: "Minimal Index",
   description:
     "Influences of Minimalism in Art, Architecture, Design, and more.",
+  openGraph: {
+    url: "https://minimalindex.com",
+    title: "Minimal Index",
+    description:
+      "Influences of Minimalism in Art, Architecture, Design, and more.",
+  },
 };
 
 export default function RootLayout({
