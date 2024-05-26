@@ -13,7 +13,8 @@ const lausanne = localFont({
 
 export const metadata: Metadata = {
   title: "Minimal Index",
-  description: "Coming soon...",
+  description:
+    "Influences of Minimalism in Art, Architecture, Design, and more.",
 };
 
 export default function RootLayout({
