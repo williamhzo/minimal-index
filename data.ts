@@ -1,7 +1,7 @@
 export type ProjectItem = {
   id: string;
   title?: string;
-  description?: string;
+  description?: string | Array<string>;
   image?: {
     url: string;
     alt: string;
@@ -33,7 +33,7 @@ export type Personality = {
     description: string;
     born: string;
   };
-  ressources: Array<{
+  ressources?: Array<{
     label: string;
     subLabel: string;
     link: string;
@@ -364,7 +364,6 @@ export const personalities: Array<Personality> = [
         "Celebrated for his poetic modernism, masterfully blends minimalist aesthetics with organic forms in his architectural works.",
       born: "Portuguese, born 1933",
     },
-    ressources: [{ label: "", subLabel: "", link: "" }],
     quote: "Architects don't\ninvent anything;\nthey transform reality",
     projects: [
       {
@@ -374,25 +373,62 @@ export const personalities: Array<Personality> = [
           row1: [
             {
               id: "1",
-              title: "todo",
-              description: "todo",
               image: {
-                url: "https://picsum.photos/id/14/640/362",
+                url: "https://res.cloudinary.com/minimalindex/image/upload/v1716757707/alvaro-siza-vieira-1-1.png",
                 alt: "",
               },
               aspectRatio: 1,
             },
+            {
+              id: "2",
+              title: "Theme & inspiration",
+              description:
+                "Built for the 1998 Lisbon World Exposition, the theme was “The Oceans: A Heritage for the Future.” Siza drew inspiration from Portugal's maritime history and the dynamic nature of the ocean.",
+              aspectRatio: 1 / 1,
+            },
+            {
+              id: "3",
+              image: {
+                url: "https://res.cloudinary.com/minimalindex/image/upload/v1716757707/alvaro-siza-vieira-1-2.png",
+                alt: "",
+              },
+              aspectRatio: 16 / 9,
+            },
+            {
+              id: "4",
+              title: "Integration with expo theme",
+              description: [
+                "The pavilion's design, with its fluid forms and open spaces, symbolized openness and exploration, resonating with the Expo's oceanic theme.",
+                "The building was designed to interact with the adjacent water, creating a sense of continuity with the Tagus River.",
+              ],
+              aspectRatio: 1 / 1,
+            },
           ],
           row2: [
             {
-              id: "2",
-              title: "todo",
-              description: "todo",
+              id: "1",
               image: {
-                url: "https://picsum.photos/id/15/640/362",
+                url: "https://res.cloudinary.com/minimalindex/image/upload/v1716757707/alvaro-siza-vieira-2-1.png",
                 alt: "",
               },
-              aspectRatio: 1,
+              aspectRatio: 16 / 9,
+            },
+            {
+              id: "2",
+              title: "Structural innovation",
+              description: [
+                "One of the pavilion's most striking features is the concrete canopy, a thin, curved slab resembling a sheet of paper floating over the space.",
+                "This design represented a technological challenge and a significant achievement in concrete construction.",
+              ],
+              aspectRatio: 1 / 1,
+            },
+            {
+              id: "3",
+              image: {
+                url: "https://res.cloudinary.com/minimalindex/image/upload/v1716757707/alvaro-siza-vieira-2-2.png",
+                alt: "",
+              },
+              aspectRatio: 16 / 9,
             },
           ],
         },

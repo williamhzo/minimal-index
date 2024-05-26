@@ -173,7 +173,13 @@ const Project: FC<{ project: ProjectItem }> = ({ project }) => {
         <p className="uppercase tracking-widest text-content-bold">
           {project.title}
         </p>
-        <p>{project.description}</p>
+        {Array.isArray(project.description) ? (
+          project.description.map((desc) => (
+            <p key={desc.slice(0, 5)}>{desc}</p>
+          ))
+        ) : (
+          <p>{project.description}</p>
+        )}
       </div>
     );
   }
