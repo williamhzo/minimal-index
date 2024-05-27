@@ -1,5 +1,4 @@
 export type ProjectItem = {
-  id: string;
   title?: string;
   description?: string | Array<string>;
   image?: {
@@ -78,7 +77,6 @@ export const personalities: Array<Personality> = [
         content: {
           row1: [
             {
-              id: "1",
               image: {
                 alt: "",
                 url: "https://res.cloudinary.com/minimalindex/image/upload/v1712395037/minimal-index/donald-judd-project-1-1.png",
@@ -86,13 +84,11 @@ export const personalities: Array<Personality> = [
               aspectRatio: 1 / 1,
             },
             {
-              id: "2",
               description:
                 "His wall-mounted “stacks,” shelf-like structures, and freestanding multicolored works were made from commercial materials and fabricated in factories.",
               aspectRatio: 1 / 1,
             },
             {
-              id: "3",
               image: {
                 alt: "",
                 url: "https://res.cloudinary.com/minimalindex/image/upload/v1712395037/minimal-index/donald-judd-project-1-2.png",
@@ -100,13 +96,11 @@ export const personalities: Array<Personality> = [
               aspectRatio: PI_RATIO,
             },
             {
-              id: "4",
               description:
                 "His wall-mounted “stacks,” shelf-like structures, and freestanding multicolored works were made from commercial materials and fabricated in factories.",
               aspectRatio: 1 / 1,
             },
             {
-              id: "5",
               image: {
                 alt: "",
                 url: "https://res.cloudinary.com/minimalindex/image/upload/v1712395037/minimal-index/donald-judd-project-1-3.png",
@@ -114,7 +108,6 @@ export const personalities: Array<Personality> = [
               aspectRatio: PI_RATIO,
             },
             {
-              id: "6",
               image: {
                 alt: "",
                 url: "https://res.cloudinary.com/minimalindex/image/upload/v1712395037/minimal-index/donald-judd-project-1-4.png",
@@ -122,7 +115,6 @@ export const personalities: Array<Personality> = [
               aspectRatio: PI_RATIO,
             },
             {
-              id: "7",
               title: "Artist Lecture - Amie Siegel on Donald Judd",
               description: "2021",
               video: "iBmHyspWGSM",
@@ -131,7 +123,6 @@ export const personalities: Array<Personality> = [
           ],
           row2: [
             {
-              id: "8",
               image: {
                 alt: "",
                 url: "https://res.cloudinary.com/minimalindex/image/upload/v1712395037/minimal-index/donald-judd-project-2-1.png",
@@ -139,13 +130,11 @@ export const personalities: Array<Personality> = [
               aspectRatio: 16 / 9,
             },
             {
-              id: "9",
               description:
                 "This process complicated traditional ideas about sculpture and fine art, undermining notions of individual authorship, the importance of the artist’s “hand,” and distinctions between art, architecture, and design.",
               aspectRatio: 1 / 1,
             },
             {
-              id: "10",
               image: {
                 alt: "",
                 url: "https://res.cloudinary.com/minimalindex/image/upload/v1712395037/minimal-index/donald-judd-project-2-2.png",
@@ -153,7 +142,6 @@ export const personalities: Array<Personality> = [
               aspectRatio: 2 / 3,
             },
             {
-              id: "11",
               image: {
                 alt: "",
                 url: "https://res.cloudinary.com/minimalindex/image/upload/v1712395037/minimal-index/donald-judd-project-2-3.png",
@@ -161,14 +149,12 @@ export const personalities: Array<Personality> = [
               aspectRatio: 16 / 9,
             },
             {
-              id: "12",
               title: "Judd | MoMA EXHIBITION",
               description: "2020",
               video: "https://todo.com/",
               aspectRatio: 4 / 3,
             },
             {
-              id: "13",
               image: {
                 alt: "",
                 url: "https://res.cloudinary.com/minimalindex/image/upload/v1712395037/minimal-index/donald-judd-project-2-4.png",
@@ -176,7 +162,6 @@ export const personalities: Array<Personality> = [
               aspectRatio: PI_RATIO,
             },
             {
-              id: "14",
               links: [
                 {
                   label: "Judd Foundation",
@@ -221,7 +206,6 @@ export const personalities: Array<Personality> = [
         content: {
           row1: [
             {
-              id: "1",
               image: {
                 url: "https://res.cloudinary.com/minimalindex/image/upload/v1712395037/minimal-index/ellsworth-kelly-project-1-1.png",
                 alt: "",
@@ -229,7 +213,6 @@ export const personalities: Array<Personality> = [
               aspectRatio: 16 / 9,
             },
             {
-              id: "2",
               image: {
                 url: "https://res.cloudinary.com/minimalindex/image/upload/v1712395037/minimal-index/ellsworth-kelly-project-1-2.png",
                 alt: "",
@@ -237,14 +220,12 @@ export const personalities: Array<Personality> = [
               aspectRatio: 16 / 9,
             },
             {
-              id: "3",
               title: "Ellsworth Kelly on Abstraction",
               description: "2019",
               video: "https://todo.com/",
               aspectRatio: 4 / 3,
             },
             {
-              id: "4",
               image: {
                 url: "https://res.cloudinary.com/minimalindex/image/upload/v1712395037/minimal-index/ellsworth-kelly-project-1-3.png",
                 alt: "",
@@ -252,13 +233,11 @@ export const personalities: Array<Personality> = [
               aspectRatio: 16 / 9,
             },
             {
-              id: "5",
               description:
                 "Kelly applied his minimalist ethos with a keen eye for balance and proportion, often employing monochromatic schemes and simple shapes that harmonize with their surroundings, reflecting a deep understanding of the spatial and contextual relationship between art and its environment.",
               aspectRatio: 1 / 1,
             },
             {
-              id: "6",
               image: {
                 url: "https://res.cloudinary.com/minimalindex/image/upload/v1712395037/minimal-index/ellsworth-kelly-project-1-4.png",
                 alt: "",
@@ -266,7 +245,6 @@ export const personalities: Array<Personality> = [
               aspectRatio: 16 / 9,
             },
             {
-              id: "7",
               links: [
                 {
                   label: "Lorem Ipsum",
@@ -289,7 +267,6 @@ export const personalities: Array<Personality> = [
           ],
           row2: [
             {
-              id: "8",
               image: {
                 url: "https://res.cloudinary.com/minimalindex/image/upload/v1712395037/minimal-index/ellsworth-kelly-project-2-1.png",
                 alt: "",
@@ -297,13 +274,11 @@ export const personalities: Array<Personality> = [
               aspectRatio: 1 / 1,
             },
             {
-              id: "9",
               description:
                 "Kelly's art is a masterful exploration of color and form, stripping away the superfluous to focus on the essence of visual experience, resulting in bold, abstract works that challenge the viewer's perception and evoke a sense of pure emotion and simplicity.",
               aspectRatio: 1 / 1,
             },
             {
-              id: "10",
               image: {
                 url: "https://res.cloudinary.com/minimalindex/image/upload/v1712395037/minimal-index/ellsworth-kelly-project-2-2.png",
                 alt: "",
@@ -311,7 +286,6 @@ export const personalities: Array<Personality> = [
               aspectRatio: 1 / 1,
             },
             {
-              id: "11",
               image: {
                 url: "https://res.cloudinary.com/minimalindex/image/upload/v1712395037/minimal-index/ellsworth-kelly-project-2-3.png",
                 alt: "",
@@ -319,7 +293,6 @@ export const personalities: Array<Personality> = [
               aspectRatio: PI_RATIO,
             },
             {
-              id: "12",
               image: {
                 url: "https://res.cloudinary.com/minimalindex/image/upload/v1712395037/minimal-index/ellsworth-kelly-project-2-4.png",
                 alt: "",
@@ -327,7 +300,6 @@ export const personalities: Array<Personality> = [
               aspectRatio: PI_RATIO,
             },
             {
-              id: "13",
               image: {
                 url: "https://res.cloudinary.com/minimalindex/image/upload/v1712395037/minimal-index/ellsworth-kelly-project-2-5.png",
                 alt: "",
@@ -335,13 +307,11 @@ export const personalities: Array<Personality> = [
               aspectRatio: PI_RATIO,
             },
             {
-              id: "14",
               description:
                 "Kelly's manipulation of space is characterized by his ability to transform environments through the interplay of light, color, and form, creating dynamic visual experiences that engage the viewer in a dialogue with the physical space, making his works not just objects of contemplation but integral components of the architectural landscape.",
               aspectRatio: 1 / 1,
             },
             {
-              id: "15",
               image: {
                 url: "https://res.cloudinary.com/minimalindex/image/upload/v1712395037/minimal-index/ellsworth-kelly-project-2-6.png",
                 alt: "",
@@ -372,7 +342,6 @@ export const personalities: Array<Personality> = [
         content: {
           row1: [
             {
-              id: "1",
               image: {
                 url: "https://res.cloudinary.com/minimalindex/image/upload/v1716757707/alvaro-siza-vieira-1-1.png",
                 alt: "",
@@ -380,14 +349,12 @@ export const personalities: Array<Personality> = [
               aspectRatio: 1,
             },
             {
-              id: "2",
               title: "Theme & inspiration",
               description:
                 "Built for the 1998 Lisbon World Exposition, the theme was “The Oceans: A Heritage for the Future.” Siza drew inspiration from Portugal's maritime history and the dynamic nature of the ocean.",
               aspectRatio: 1 / 1,
             },
             {
-              id: "3",
               image: {
                 url: "https://res.cloudinary.com/minimalindex/image/upload/v1716757707/alvaro-siza-vieira-1-2.png",
                 alt: "",
@@ -395,7 +362,6 @@ export const personalities: Array<Personality> = [
               aspectRatio: 16 / 9,
             },
             {
-              id: "4",
               title: "Integration with expo theme",
               description: [
                 "The pavilion's design, with its fluid forms and open spaces, symbolized openness and exploration, resonating with the Expo's oceanic theme.",
@@ -406,7 +372,6 @@ export const personalities: Array<Personality> = [
           ],
           row2: [
             {
-              id: "1",
               image: {
                 url: "https://res.cloudinary.com/minimalindex/image/upload/v1716757707/alvaro-siza-vieira-2-1.png",
                 alt: "",
@@ -414,7 +379,6 @@ export const personalities: Array<Personality> = [
               aspectRatio: 16 / 9,
             },
             {
-              id: "2",
               title: "Structural innovation",
               description: [
                 "One of the pavilion's most striking features is the concrete canopy, a thin, curved slab resembling a sheet of paper floating over the space.",
@@ -423,7 +387,6 @@ export const personalities: Array<Personality> = [
               aspectRatio: 1 / 1,
             },
             {
-              id: "3",
               image: {
                 url: "https://res.cloudinary.com/minimalindex/image/upload/v1716757707/alvaro-siza-vieira-2-2.png",
                 alt: "",
@@ -439,26 +402,56 @@ export const personalities: Array<Personality> = [
         content: {
           row1: [
             {
-              id: "1",
-              title: "todo",
-              description: "todo",
               image: {
-                url: "https://picsum.photos/id/14/640/362",
+                url: "https://res.cloudinary.com/minimalindex/image/upload/v1716757707/alvaro-siza-vieira-3-1.png",
                 alt: "",
               },
-              aspectRatio: 1,
+              aspectRatio: 2 / 3,
+            },
+            {
+              title: "Location & context",
+              description:
+                "Situated in Porto, Portugal, this museum is integrated within the historic Serralves Estate. The existing gardens and the villa on the estate influenced Siza's design.",
+              aspectRatio: 1 / 1,
+            },
+            {
+              image: {
+                url: "https://res.cloudinary.com/minimalindex/image/upload/v1716757707/alvaro-siza-vieira-3-2.png",
+                alt: "",
+              },
+              aspectRatio: 16 / 9,
+            },
+            {
+              title: "Architectural language",
+              description: [
+                "The building is characterized by its clean lines, uncluttered aesthetic, and thoughtful use of natural light, which is a hallmark of Siza's minimalist approach.",
+                "The spatial progression through the museum is carefully choreographed to create a serene and contemplative environment.",
+              ],
+              aspectRatio: 1 / 1,
             },
           ],
           row2: [
             {
-              id: "2",
-              title: "todo",
-              description: "todo",
               image: {
-                url: "https://picsum.photos/id/15/640/362",
+                url: "https://res.cloudinary.com/minimalindex/image/upload/v1716757707/alvaro-siza-vieira-4-1.png",
                 alt: "",
               },
-              aspectRatio: 1,
+              aspectRatio: 16 / 9,
+            },
+            {
+              title: "Design approach",
+              description: [
+                "Siza aimed to create a harmonious dialogue between the new museum and its surroundings. He utilized minimalist forms, with the white stucco exterior blending seamlessly with the landscape.",
+                "The design respects the existing topography, using it to dictate the flow and organization of the museum spaces.",
+              ],
+              aspectRatio: 1 / 1,
+            },
+            {
+              image: {
+                url: "https://res.cloudinary.com/minimalindex/image/upload/v1716757707/alvaro-siza-vieira-4-2.png",
+                alt: "",
+              },
+              aspectRatio: 16 / 9,
             },
           ],
         },
@@ -469,26 +462,77 @@ export const personalities: Array<Personality> = [
         content: {
           row1: [
             {
-              id: "1",
-              title: "todo",
-              description: "todo",
               image: {
-                url: "https://picsum.photos/id/14/640/362",
+                url: "https://res.cloudinary.com/minimalindex/image/upload/v1716757707/alvaro-siza-vieira-5-1.png",
                 alt: "",
               },
-              aspectRatio: 1,
+              aspectRatio: PI_RATIO,
+            },
+            {
+              title: "Cultural context",
+              description:
+                "Located in Yongin, South Korea, this project demanded a sensitive approach to merge both the local cultural context and the company's identity.",
+              aspectRatio: 1 / 1,
+            },
+            {
+              image: {
+                url: "https://res.cloudinary.com/minimalindex/image/upload/v1716757707/alvaro-siza-vieira-5-2.png",
+                alt: "",
+              },
+              aspectRatio: 4 / 3,
+            },
+            {
+              title: "Adaptation to environment",
+              description: [
+                "The building's layout and form were influenced by the need to maximize natural light and facilitate efficient circulation.",
+                "Siza's use of courtyards and open spaces within the design fosters collaboration and a connection to the natural environment, in line with traditional Korean architectural principles.",
+              ],
+              aspectRatio: 1 / 1,
+            },
+            {
+              image: {
+                url: "https://res.cloudinary.com/minimalindex/image/upload/v1716757707/alvaro-siza-vieira-5-3.png",
+                alt: "",
+              },
+              aspectRatio: PI_RATIO,
             },
           ],
           row2: [
             {
-              id: "2",
-              title: "todo",
-              description: "todo",
               image: {
-                url: "https://picsum.photos/id/15/640/362",
+                url: "https://res.cloudinary.com/minimalindex/image/upload/v1716757707/alvaro-siza-vieira-6-1.png",
                 alt: "",
               },
-              aspectRatio: 1,
+              aspectRatio: PI_RATIO,
+            },
+            {
+              image: {
+                url: "https://res.cloudinary.com/minimalindex/image/upload/v1716757707/alvaro-siza-vieira-6-2.png",
+                alt: "",
+              },
+              aspectRatio: PI_RATIO,
+            },
+            {
+              title: "Adaptation to environment",
+              description: [
+                "The building's layout and form were influenced by the need to maximize natural light and facilitate efficient circulation.",
+                "Siza's use of courtyards and open spaces within the design fosters collaboration and a connection to the natural environment, in line with traditional Korean architectural principles.",
+              ],
+              aspectRatio: 1 / 1,
+            },
+            {
+              image: {
+                url: "https://res.cloudinary.com/minimalindex/image/upload/v1716757707/alvaro-siza-vieira-6-3.png",
+                alt: "",
+              },
+              aspectRatio: PI_RATIO,
+            },
+            {
+              image: {
+                url: "https://res.cloudinary.com/minimalindex/image/upload/v1716757707/alvaro-siza-vieira-6-4.png",
+                alt: "",
+              },
+              aspectRatio: PI_RATIO,
             },
           ],
         },
@@ -506,7 +550,6 @@ export const personalities: Array<Personality> = [
         "Considered by historians to be one of the most important architect of the 20th century and one whose work left a legacy in architectural theory.",
       born: "American, born Germany. 1886-1969",
     },
-    ressources: [{ label: "", subLabel: "", link: "" }],
     quote: "You have to build up \nthe world you want \nto live in",
     projects: [
       {
@@ -515,26 +558,120 @@ export const personalities: Array<Personality> = [
         content: {
           row1: [
             {
-              id: "1",
-              title: "todo",
-              description: "todo",
               image: {
-                url: "https://picsum.photos/id/17/640/362",
+                url: "https://res.cloudinary.com/minimalindex/image/upload/v1716844841/ludwig-mies-van-der-rohe-1-1.png",
+                alt: "",
+              },
+              aspectRatio: 16 / 9,
+            },
+            {
+              image: {
+                url: "https://res.cloudinary.com/minimalindex/image/upload/v1716844841/ludwig-mies-van-der-rohe-1-2.png",
+                alt: "",
+              },
+              aspectRatio: 16 / 9,
+            },
+            {
+              image: {
+                url: "https://res.cloudinary.com/minimalindex/image/upload/v1716844841/ludwig-mies-van-der-rohe-1-3.png",
+                alt: "",
+              },
+              aspectRatio: 16 / 9,
+            },
+            {
+              description:
+                "I don't want to be interesting.\nI want to be good.",
+              aspectRatio: 19 / 9,
+            },
+            {
+              image: {
+                url: "https://res.cloudinary.com/minimalindex/image/upload/v1716844841/ludwig-mies-van-der-rohe-1-4.png",
                 alt: "",
               },
               aspectRatio: 1,
             },
+            {
+              image: {
+                url: "https://res.cloudinary.com/minimalindex/image/upload/v1716844841/ludwig-mies-van-der-rohe-1-5.png",
+                alt: "",
+              },
+              aspectRatio: 16 / 9,
+            },
+            {
+              image: {
+                url: "https://res.cloudinary.com/minimalindex/image/upload/v1716844841/ludwig-mies-van-der-rohe-1-6.png",
+                alt: "",
+              },
+              aspectRatio: 16 / 9,
+            },
+            {
+              image: {
+                url: "https://res.cloudinary.com/minimalindex/image/upload/v1716844841/ludwig-mies-van-der-rohe-1-7.png",
+                alt: "",
+              },
+              aspectRatio: 16 / 9,
+            },
           ],
           row2: [
             {
-              id: "2",
-              title: "todo",
-              description: "todo",
+              title: "Location & context",
+              description:
+                "Located in the heart of Barcelona, Spain, the Barcelona Pavilion serves as a cornerstone of modern architecture, symbolizing a blend of cultural heritage and avant-garde design, originally conceived to represent Germany at the 1929 International Exposition.",
+              aspectRatio: 1,
+            },
+            {
               image: {
-                url: "https://picsum.photos/id/18/640/362",
+                url: "https://res.cloudinary.com/minimalindex/image/upload/v1716844841/ludwig-mies-van-der-rohe-2-1.png",
                 alt: "",
               },
+              aspectRatio: 16 / 9,
+            },
+            {
+              image: {
+                url: "https://res.cloudinary.com/minimalindex/image/upload/v1716844841/ludwig-mies-van-der-rohe-2-2.png",
+                alt: "",
+              },
+              aspectRatio: 16 / 9,
+            },
+            {
+              title: "Design approach",
+              description:
+                "Mies van der Rohe's approach in the Barcelona Pavilion redefines architectural space through fluidity and openness, utilizing planes rather than volumes and integrating the indoors with the outdoors to craft an experiential journey that transcends traditional boundaries.",
               aspectRatio: 1,
+            },
+            {
+              image: {
+                url: "https://res.cloudinary.com/minimalindex/image/upload/v1716844841/ludwig-mies-van-der-rohe-2-3.png",
+                alt: "",
+              },
+              aspectRatio: 16 / 9,
+            },
+            {
+              image: {
+                url: "https://res.cloudinary.com/minimalindex/image/upload/v1716844841/ludwig-mies-van-der-rohe-2-4.png",
+                alt: "",
+              },
+              aspectRatio: 16 / 9,
+            },
+            {
+              title: "Architectural language",
+              description:
+                "The architectural language of the Barcelona Pavilion is marked by its sleek, minimalist aesthetic, featuring pioneering use of materials such as marble, travertine, and onyx, combined with precise geometric forms and the innovative incorporation of reflective water surfaces, encapsulating the essence of modernism with timeless elegance.",
+              aspectRatio: 1,
+            },
+            {
+              image: {
+                url: "https://res.cloudinary.com/minimalindex/image/upload/v1716844841/ludwig-mies-van-der-rohe-2-5.png",
+                alt: "",
+              },
+              aspectRatio: 4 / 3,
+            },
+            {
+              image: {
+                url: "https://res.cloudinary.com/minimalindex/image/upload/v1716844841/ludwig-mies-van-der-rohe-2-6.png",
+                alt: "",
+              },
+              aspectRatio: 4 / 3,
             },
           ],
         },
@@ -545,23 +682,112 @@ export const personalities: Array<Personality> = [
         content: {
           row1: [
             {
-              id: "1",
-              title: "todo",
-              description: "todo",
               image: {
-                url: "https://picsum.photos/id/17/640/362",
+                url: "https://res.cloudinary.com/minimalindex/image/upload/v1716844841/ludwig-mies-van-der-rohe-3-1.png",
                 alt: "",
               },
+              aspectRatio: PI_RATIO,
+            },
+            {
+              title: "Design approach",
+              description:
+                "Emphasizing transparency and simplicity. Creating an uncluttered living space that speaks volumes about the potential of modern architecture to cater to functional living through elegant simplicity.",
               aspectRatio: 1,
+            },
+            {
+              image: {
+                url: "https://res.cloudinary.com/minimalindex/image/upload/v1716844841/ludwig-mies-van-der-rohe-3-2.png",
+                alt: "",
+              },
+              aspectRatio: PI_RATIO,
+            },
+            {
+              image: {
+                url: "https://res.cloudinary.com/minimalindex/image/upload/v1716844841/ludwig-mies-van-der-rohe-3-3.png",
+                alt: "",
+              },
+              aspectRatio: PI_RATIO,
+            },
+            {
+              image: {
+                url: "https://res.cloudinary.com/minimalindex/image/upload/v1716844841/ludwig-mies-van-der-rohe-3-4.png",
+                alt: "",
+              },
+              aspectRatio: PI_RATIO,
+            },
+            {
+              image: {
+                url: "https://res.cloudinary.com/minimalindex/image/upload/v1716844841/ludwig-mies-van-der-rohe-3-5.png",
+                alt: "",
+              },
+              aspectRatio: PI_RATIO,
+            },
+            {
+              image: {
+                url: "https://res.cloudinary.com/minimalindex/image/upload/v1716844841/ludwig-mies-van-der-rohe-3-6.png",
+                alt: "",
+              },
+              aspectRatio: 2 / 3,
+            },
+            {
+              image: {
+                url: "https://res.cloudinary.com/minimalindex/image/upload/v1716844841/ludwig-mies-van-der-rohe-3-7.png",
+                alt: "",
+              },
+              aspectRatio: PI_RATIO,
             },
           ],
           row2: [
             {
-              id: "2",
-              title: "todo",
-              description: "todo",
+              title: "Location & context",
+              description:
+                "Nestled in a serene, natural landscape along the Fox River in Plano, Illinois, the Farnsworth House emerges as a harmonious intersection of architecture and nature, offering a tranquil retreat that blurs the lines between indoor and outdoor spaces.",
+              aspectRatio: 1,
+            },
+            {
               image: {
-                url: "https://picsum.photos/id/18/640/362",
+                url: "https://res.cloudinary.com/minimalindex/image/upload/v1716844841/ludwig-mies-van-der-rohe-4-1.png",
+                alt: "",
+              },
+              aspectRatio: PI_RATIO,
+            },
+            {
+              image: {
+                url: "https://res.cloudinary.com/minimalindex/image/upload/v1716844841/ludwig-mies-van-der-rohe-4-2.png",
+                alt: "",
+              },
+              aspectRatio: PI_RATIO,
+            },
+            {
+              title: "Architectural language",
+              description:
+                "The Farnsworth House stands as an iconic testament to the International Style of architecture, with its clear structural framework, use of industrial materials like steel and glass, and the seamless flow of spaces, articulating a language of openness, fluidity, and visual lightness.",
+              aspectRatio: 1,
+            },
+            {
+              image: {
+                url: "https://res.cloudinary.com/minimalindex/image/upload/v1716844841/ludwig-mies-van-der-rohe-4-3.png",
+                alt: "",
+              },
+              aspectRatio: PI_RATIO,
+            },
+            {
+              image: {
+                url: "https://res.cloudinary.com/minimalindex/image/upload/v1716844841/ludwig-mies-van-der-rohe-4-4.png",
+                alt: "",
+              },
+              aspectRatio: 1,
+            },
+            {
+              image: {
+                url: "https://res.cloudinary.com/minimalindex/image/upload/v1716844841/ludwig-mies-van-der-rohe-4-5.png",
+                alt: "",
+              },
+              aspectRatio: PI_RATIO,
+            },
+            {
+              image: {
+                url: "https://res.cloudinary.com/minimalindex/image/upload/v1716844841/ludwig-mies-van-der-rohe-4-6.png",
                 alt: "",
               },
               aspectRatio: 1,
@@ -575,25 +801,119 @@ export const personalities: Array<Personality> = [
         content: {
           row1: [
             {
-              id: "1",
-              title: "todo",
-              description: "todo",
               image: {
-                url: "https://picsum.photos/id/17/640/362",
+                url: "https://res.cloudinary.com/minimalindex/image/upload/v1716844841/ludwig-mies-van-der-rohe-5-1.png",
                 alt: "",
               },
-              aspectRatio: 1,
+              aspectRatio: 16 / 9,
+            },
+            {
+              image: {
+                url: "https://res.cloudinary.com/minimalindex/image/upload/v1716844841/ludwig-mies-van-der-rohe-5-2.png",
+                alt: "",
+              },
+              aspectRatio: 16 / 9,
+            },
+            {
+              image: {
+                url: "https://res.cloudinary.com/minimalindex/image/upload/v1716844841/ludwig-mies-van-der-rohe-5-3.png",
+                alt: "",
+              },
+              aspectRatio: 4 / 3,
+            },
+            {
+              description:
+                "It is logical for architecture to change as the way we live also changes.",
+              aspectRatio: 19 / 9,
+            },
+            {
+              image: {
+                url: "https://res.cloudinary.com/minimalindex/image/upload/v1716844841/ludwig-mies-van-der-rohe-5-4.png",
+                alt: "",
+              },
+              aspectRatio: 4 / 3,
+            },
+            {
+              image: {
+                url: "https://res.cloudinary.com/minimalindex/image/upload/v1716844841/ludwig-mies-van-der-rohe-5-5.png",
+                alt: "",
+              },
+              aspectRatio: 4 / 3,
+            },
+            {
+              image: {
+                url: "https://res.cloudinary.com/minimalindex/image/upload/v1716844841/ludwig-mies-van-der-rohe-5-6.png",
+                alt: "",
+              },
+              aspectRatio: 4 / 3,
+            },
+            {
+              image: {
+                url: "https://res.cloudinary.com/minimalindex/image/upload/v1716844841/ludwig-mies-van-der-rohe-5-7.png",
+                alt: "",
+              },
+              aspectRatio: 2 / 3,
             },
           ],
           row2: [
             {
-              id: "2",
-              title: "todo",
-              description: "todo",
+              title: "Location & context",
+              description:
+                "The Neue Nationalgalerie in Berlin stands as a testament to minimalism amidst the city's cultural heart, reflecting Mies van der Rohe's mastery in blending urbanity with spatial simplicity.",
+              aspectRatio: 1,
+            },
+            {
               image: {
-                url: "https://picsum.photos/id/18/640/362",
+                url: "https://res.cloudinary.com/minimalindex/image/upload/v1716844841/ludwig-mies-van-der-rohe-6-1.png",
                 alt: "",
               },
+              aspectRatio: 16 / 9,
+            },
+            {
+              title: "Design approach",
+              description:
+                "With its emphasis on open space and transparency, the gallery's design encapsulates the minimalist principle of reduction, focusing on the interplay of light and shadow, form and material.",
+              aspectRatio: 1,
+            },
+            {
+              image: {
+                url: "https://res.cloudinary.com/minimalindex/image/upload/v1716844841/ludwig-mies-van-der-rohe-6-2.png",
+                alt: "",
+              },
+              aspectRatio: 4 / 3,
+            },
+            {
+              image: {
+                url: "https://res.cloudinary.com/minimalindex/image/upload/v1716844841/ludwig-mies-van-der-rohe-6-3.png",
+                alt: "",
+              },
+              aspectRatio: 4 / 3,
+            },
+            {
+              image: {
+                url: "https://res.cloudinary.com/minimalindex/image/upload/v1716844841/ludwig-mies-van-der-rohe-6-4.png",
+                alt: "",
+              },
+              aspectRatio: 4 / 3,
+            },
+            {
+              image: {
+                url: "https://res.cloudinary.com/minimalindex/image/upload/v1716844841/ludwig-mies-van-der-rohe-6-5.png",
+                alt: "",
+              },
+              aspectRatio: 4 / 3,
+            },
+            {
+              image: {
+                url: "https://res.cloudinary.com/minimalindex/image/upload/v1716844841/ludwig-mies-van-der-rohe-6-6.png",
+                alt: "",
+              },
+              aspectRatio: 4 / 3,
+            },
+            {
+              title: "Architectural language",
+              description:
+                "The gallery's iconic, steel-framed, glass-enclosed upper pavilion, supported by sleek, cruciform columns, showcases Mies's minimalist aesthetic, merging structural innovation with visual clarity.",
               aspectRatio: 1,
             },
           ],
@@ -621,7 +941,6 @@ export const personalities: Array<Personality> = [
         content: {
           row1: [
             {
-              id: "1",
               title: "todo",
               description: "todo",
               image: {
@@ -633,7 +952,6 @@ export const personalities: Array<Personality> = [
           ],
           row2: [
             {
-              id: "2",
               title: "todo",
               description: "todo",
               image: {
@@ -651,7 +969,6 @@ export const personalities: Array<Personality> = [
         content: {
           row1: [
             {
-              id: "1",
               title: "todo",
               description: "todo",
               image: {
@@ -663,7 +980,6 @@ export const personalities: Array<Personality> = [
           ],
           row2: [
             {
-              id: "2",
               title: "todo",
               description: "todo",
               image: {
@@ -698,7 +1014,6 @@ export const personalities: Array<Personality> = [
         content: {
           row1: [
             {
-              id: "1",
               image: {
                 url: "https://res.cloudinary.com/minimalindex/image/upload/v1712395037/minimal-index/hans-wegner-project-1-1.png",
                 alt: "",
@@ -706,13 +1021,11 @@ export const personalities: Array<Personality> = [
               aspectRatio: 16 / 9,
             },
             {
-              id: "2",
               description:
                 "Wegner, also known as the 'Master of the Chair', designed more than 500 chairs during his career — many of which are considered masterpieces.",
               aspectRatio: 1 / 1,
             },
             {
-              id: "3",
               image: {
                 url: "https://res.cloudinary.com/minimalindex/image/upload/v1712395037/minimal-index/hans-wegner-project-1-2.png",
                 alt: "",
@@ -720,7 +1033,6 @@ export const personalities: Array<Personality> = [
               aspectRatio: 1 / 1,
             },
             {
-              id: "4",
               image: {
                 url: "https://res.cloudinary.com/minimalindex/image/upload/v1712395037/minimal-index/hans-wegner-project-1-3.png",
                 alt: "",
@@ -728,7 +1040,6 @@ export const personalities: Array<Personality> = [
               aspectRatio: 1 / 1,
             },
             {
-              id: "5",
               image: {
                 url: "https://res.cloudinary.com/minimalindex/image/upload/v1712395037/minimal-index/hans-wegner-project-1-4.png",
                 alt: "",
@@ -736,14 +1047,12 @@ export const personalities: Array<Personality> = [
               aspectRatio: 4 / 3,
             },
             {
-              id: "6",
               title: "Functional Beauty",
               description:
                 "His designs were deeply rooted in the belief that beauty arises from utility, embodying a seamless blend of form and function.",
               aspectRatio: 1 / 1,
             },
             {
-              id: "7",
               image: {
                 url: "https://res.cloudinary.com/minimalindex/image/upload/v1712395037/minimal-index/hans-wegner-project-1-5.png",
                 alt: "",
@@ -753,14 +1062,12 @@ export const personalities: Array<Personality> = [
           ],
           row2: [
             {
-              id: "8",
               title: "Craft Over Mass Production",
               description:
                 "Wegner prioritized traditional craftsmanship techniques, ensuring each piece of furniture was not only aesthetically pleasing but also exceptionally well-made.",
               aspectRatio: 1 / 1,
             },
             {
-              id: "9",
               image: {
                 url: "https://res.cloudinary.com/minimalindex/image/upload/v1712395037/minimal-index/hans-wegner-project-2-1.png",
                 alt: "",
@@ -768,7 +1075,6 @@ export const personalities: Array<Personality> = [
               aspectRatio: 1 / 1,
             },
             {
-              id: "10",
               image: {
                 url: "https://res.cloudinary.com/minimalindex/image/upload/v1712395037/minimal-index/hans-wegner-project-2-2.png",
                 alt: "",
@@ -776,7 +1082,6 @@ export const personalities: Array<Personality> = [
               aspectRatio: 1 / 1,
             },
             {
-              id: "11",
               image: {
                 url: "https://res.cloudinary.com/minimalindex/image/upload/v1712395037/minimal-index/hans-wegner-project-2-3.png",
                 alt: "",
@@ -784,14 +1089,12 @@ export const personalities: Array<Personality> = [
               aspectRatio: 1 / 1,
             },
             {
-              id: "12",
               title: "Ergonomic Focus",
               description:
                 "Wegner's furniture is celebrated for its comfort and ergonomics, designed to support the human body naturally and elegantly.",
               aspectRatio: 1 / 1,
             },
             {
-              id: "13",
               image: {
                 url: "https://res.cloudinary.com/minimalindex/image/upload/v1712395037/minimal-index/hans-wegner-project-2-4.png",
                 alt: "",
@@ -799,7 +1102,6 @@ export const personalities: Array<Personality> = [
               aspectRatio: 4 / 3,
             },
             {
-              id: "14",
               image: {
                 url: "https://res.cloudinary.com/minimalindex/image/upload/v1712395037/minimal-index/hans-wegner-project-2-5.png",
                 alt: "",
@@ -807,7 +1109,6 @@ export const personalities: Array<Personality> = [
               aspectRatio: 1 / 1,
             },
             {
-              id: "15",
               image: {
                 url: "https://res.cloudinary.com/minimalindex/image/upload/v1712395037/minimal-index/hans-wegner-project-2-6  .png",
                 alt: "",
@@ -839,7 +1140,6 @@ export const personalities: Array<Personality> = [
         content: {
           row1: [
             {
-              id: "1",
               image: {
                 url: "https://res.cloudinary.com/minimalindex/image/upload/v1712395037/minimal-index/hans-wegner-project-1-1.png",
                 alt: "",
@@ -849,7 +1149,6 @@ export const personalities: Array<Personality> = [
           ],
           row2: [
             {
-              id: "2",
               title: "todo",
               description: "todo",
               aspectRatio: 1 / 1,
@@ -863,7 +1162,6 @@ export const personalities: Array<Personality> = [
         content: {
           row1: [
             {
-              id: "1",
               image: {
                 url: "https://res.cloudinary.com/minimalindex/image/upload/v1712395037/minimal-index/hans-wegner-project-1-1.png",
                 alt: "",
@@ -873,7 +1171,6 @@ export const personalities: Array<Personality> = [
           ],
           row2: [
             {
-              id: "2",
               title: "todo",
               description: "todo",
               aspectRatio: 1 / 1,
