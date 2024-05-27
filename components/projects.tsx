@@ -3,6 +3,7 @@
 import { AspectRatio } from "@/components/aspect-ratio";
 import { Column } from "@/components/column";
 import { ListItem } from "@/components/list-item";
+import { Quote } from "@/components/quote";
 import { Row } from "@/components/row";
 import { Youtube } from "@/components/youtube";
 import { type ProjectItem, type Project, personalities } from "@/data";
@@ -78,8 +79,15 @@ const ProjectItem: FC<{ project: Project }> = ({ project }) => {
 };
 
 const ProjectCells: FC<{ projects: Array<ProjectItem> }> = ({ projects }) => {
-  return projects.map((p) => (
-    <div key={p.id} style={{ width: ROW_HEIGHT * p.aspectRatio }}>
+  return projects.map((p, i) => (
+    <div
+      key={
+        p.image?.url ||
+        (Array.isArray(p.description) ? p.description[0] : p.description) ||
+        i
+      }
+      style={{ width: ROW_HEIGHT * p.aspectRatio }}
+    >
       <AspectRatio ratio={p.aspectRatio} className="grid place-items-center">
         <Project project={p} />
       </AspectRatio>
@@ -177,6 +185,8 @@ const Project: FC<{ project: ProjectItem }> = ({ project }) => {
           project.description.map((desc) => (
             <p key={desc.slice(0, 5)}>{desc}</p>
           ))
+        ) : project.aspectRatio === 19 / 9 && project.description ? (
+          <Quote quote={project.description} />
         ) : (
           <p>{project.description}</p>
         )}

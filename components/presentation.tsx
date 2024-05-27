@@ -1,6 +1,7 @@
 "use client";
 
 import { Column } from "@/components/column";
+import { Quote } from "@/components/quote";
 import { Row } from "@/components/row";
 import { Personality, personalities } from "@/data";
 import Image from "next/image";
@@ -41,9 +42,7 @@ export const Presentation: FC<PresentationProps> = ({ personalityId }) => {
         </div>
       </div>
 
-      <p className="flex items-start whitespace-pre-wrap text-xl text-content-lightest">
-        <span className="text-[48px]">“</span> {personality.quote}
-      </p>
+      <Quote quote={personality.quote} />
     </Column>
   );
 };
