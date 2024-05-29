@@ -1,6 +1,6 @@
 export default function Page() {
   return (
-    <div className="flex max-w-3xl flex-col items-start gap-20 pt-[14px] text-xl tracking-[0.02rem] text-content-bold">
+    <div className="flex max-w-3xl flex-col items-start gap-20 text-balance pt-[14px] text-xl tracking-[0.02rem] text-content-bold">
       <p>
         Our exploration began with an appreciation for aesthetic purity and
         functional clarity.
