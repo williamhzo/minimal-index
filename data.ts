@@ -81,12 +81,12 @@ export const personalities: Array<Personality> = [
                 alt: "",
                 url: "https://res.cloudinary.com/minimalindex/image/upload/v1712395037/minimal-index/donald-judd-project-1-1.png",
               },
-              aspectRatio: 1 / 1,
+              aspectRatio: 1,
             },
             {
               description:
                 "His wall-mounted “stacks,” shelf-like structures, and freestanding multicolored works were made from commercial materials and fabricated in factories.",
-              aspectRatio: 1 / 1,
+              aspectRatio: 1,
             },
             {
               image: {
@@ -98,7 +98,7 @@ export const personalities: Array<Personality> = [
             {
               description:
                 "His wall-mounted “stacks,” shelf-like structures, and freestanding multicolored works were made from commercial materials and fabricated in factories.",
-              aspectRatio: 1 / 1,
+              aspectRatio: 1,
             },
             {
               image: {
@@ -132,7 +132,7 @@ export const personalities: Array<Personality> = [
             {
               description:
                 "This process complicated traditional ideas about sculpture and fine art, undermining notions of individual authorship, the importance of the artist’s “hand,” and distinctions between art, architecture, and design.",
-              aspectRatio: 1 / 1,
+              aspectRatio: 1,
             },
             {
               image: {
@@ -179,7 +179,7 @@ export const personalities: Array<Personality> = [
                   url: "https://todo.com/",
                 },
               ],
-              aspectRatio: 1 / 1,
+              aspectRatio: 1,
             },
           ],
         },
@@ -235,7 +235,7 @@ export const personalities: Array<Personality> = [
             {
               description:
                 "Kelly applied his minimalist ethos with a keen eye for balance and proportion, often employing monochromatic schemes and simple shapes that harmonize with their surroundings, reflecting a deep understanding of the spatial and contextual relationship between art and its environment.",
-              aspectRatio: 1 / 1,
+              aspectRatio: 1,
             },
             {
               image: {
@@ -262,7 +262,7 @@ export const personalities: Array<Personality> = [
                   url: "https://todo.com/",
                 },
               ],
-              aspectRatio: 1 / 1,
+              aspectRatio: 1,
             },
           ],
           row2: [
@@ -271,19 +271,19 @@ export const personalities: Array<Personality> = [
                 url: "https://res.cloudinary.com/minimalindex/image/upload/v1712395037/minimal-index/ellsworth-kelly-project-2-1.png",
                 alt: "",
               },
-              aspectRatio: 1 / 1,
+              aspectRatio: 1,
             },
             {
               description:
                 "Kelly's art is a masterful exploration of color and form, stripping away the superfluous to focus on the essence of visual experience, resulting in bold, abstract works that challenge the viewer's perception and evoke a sense of pure emotion and simplicity.",
-              aspectRatio: 1 / 1,
+              aspectRatio: 1,
             },
             {
               image: {
                 url: "https://res.cloudinary.com/minimalindex/image/upload/v1712395037/minimal-index/ellsworth-kelly-project-2-2.png",
                 alt: "",
               },
-              aspectRatio: 1 / 1,
+              aspectRatio: 1,
             },
             {
               image: {
@@ -309,7 +309,7 @@ export const personalities: Array<Personality> = [
             {
               description:
                 "Kelly's manipulation of space is characterized by his ability to transform environments through the interplay of light, color, and form, creating dynamic visual experiences that engage the viewer in a dialogue with the physical space, making his works not just objects of contemplation but integral components of the architectural landscape.",
-              aspectRatio: 1 / 1,
+              aspectRatio: 1,
             },
             {
               image: {
@@ -352,7 +352,7 @@ export const personalities: Array<Personality> = [
               title: "Theme & inspiration",
               description:
                 "Built for the 1998 Lisbon World Exposition, the theme was “The Oceans: A Heritage for the Future.” Siza drew inspiration from Portugal's maritime history and the dynamic nature of the ocean.",
-              aspectRatio: 1 / 1,
+              aspectRatio: 1,
             },
             {
               image: {
@@ -367,7 +367,7 @@ export const personalities: Array<Personality> = [
                 "The pavilion's design, with its fluid forms and open spaces, symbolized openness and exploration, resonating with the Expo's oceanic theme.",
                 "The building was designed to interact with the adjacent water, creating a sense of continuity with the Tagus River.",
               ],
-              aspectRatio: 1 / 1,
+              aspectRatio: 1,
             },
           ],
           row2: [
@@ -384,7 +384,7 @@ export const personalities: Array<Personality> = [
                 "One of the pavilion's most striking features is the concrete canopy, a thin, curved slab resembling a sheet of paper floating over the space.",
                 "This design represented a technological challenge and a significant achievement in concrete construction.",
               ],
-              aspectRatio: 1 / 1,
+              aspectRatio: 1,
             },
             {
               image: {
@@ -412,7 +412,7 @@ export const personalities: Array<Personality> = [
               title: "Location & context",
               description:
                 "Situated in Porto, Portugal, this museum is integrated within the historic Serralves Estate. The existing gardens and the villa on the estate influenced Siza's design.",
-              aspectRatio: 1 / 1,
+              aspectRatio: 1,
             },
             {
               image: {
@@ -427,7 +427,7 @@ export const personalities: Array<Personality> = [
                 "The building is characterized by its clean lines, uncluttered aesthetic, and thoughtful use of natural light, which is a hallmark of Siza's minimalist approach.",
                 "The spatial progression through the museum is carefully choreographed to create a serene and contemplative environment.",
               ],
-              aspectRatio: 1 / 1,
+              aspectRatio: 1,
             },
           ],
           row2: [
@@ -444,7 +444,7 @@ export const personalities: Array<Personality> = [
                 "Siza aimed to create a harmonious dialogue between the new museum and its surroundings. He utilized minimalist forms, with the white stucco exterior blending seamlessly with the landscape.",
                 "The design respects the existing topography, using it to dictate the flow and organization of the museum spaces.",
               ],
-              aspectRatio: 1 / 1,
+              aspectRatio: 1,
             },
             {
               image: {
@@ -472,7 +472,7 @@ export const personalities: Array<Personality> = [
               title: "Cultural context",
               description:
                 "Located in Yongin, South Korea, this project demanded a sensitive approach to merge both the local cultural context and the company's identity.",
-              aspectRatio: 1 / 1,
+              aspectRatio: 1,
             },
             {
               image: {
@@ -487,7 +487,7 @@ export const personalities: Array<Personality> = [
                 "The building's layout and form were influenced by the need to maximize natural light and facilitate efficient circulation.",
                 "Siza's use of courtyards and open spaces within the design fosters collaboration and a connection to the natural environment, in line with traditional Korean architectural principles.",
               ],
-              aspectRatio: 1 / 1,
+              aspectRatio: 1,
             },
             {
               image: {
@@ -518,7 +518,7 @@ export const personalities: Array<Personality> = [
                 "The building's layout and form were influenced by the need to maximize natural light and facilitate efficient circulation.",
                 "Siza's use of courtyards and open spaces within the design fosters collaboration and a connection to the natural environment, in line with traditional Korean architectural principles.",
               ],
-              aspectRatio: 1 / 1,
+              aspectRatio: 1,
             },
             {
               image: {
@@ -1135,21 +1135,21 @@ export const personalities: Array<Personality> = [
             {
               description:
                 "Wegner, also known as the 'Master of the Chair', designed more than 500 chairs during his career — many of which are considered masterpieces.",
-              aspectRatio: 1 / 1,
+              aspectRatio: 1,
             },
             {
               image: {
                 url: "https://res.cloudinary.com/minimalindex/image/upload/v1712395037/minimal-index/hans-wegner-project-1-2.png",
                 alt: "",
               },
-              aspectRatio: 1 / 1,
+              aspectRatio: 1,
             },
             {
               image: {
                 url: "https://res.cloudinary.com/minimalindex/image/upload/v1712395037/minimal-index/hans-wegner-project-1-3.png",
                 alt: "",
               },
-              aspectRatio: 1 / 1,
+              aspectRatio: 1,
             },
             {
               image: {
@@ -1162,7 +1162,7 @@ export const personalities: Array<Personality> = [
               title: "Functional Beauty",
               description:
                 "His designs were deeply rooted in the belief that beauty arises from utility, embodying a seamless blend of form and function.",
-              aspectRatio: 1 / 1,
+              aspectRatio: 1,
             },
             {
               image: {
@@ -1177,34 +1177,34 @@ export const personalities: Array<Personality> = [
               title: "Craft Over Mass Production",
               description:
                 "Wegner prioritized traditional craftsmanship techniques, ensuring each piece of furniture was not only aesthetically pleasing but also exceptionally well-made.",
-              aspectRatio: 1 / 1,
+              aspectRatio: 1,
             },
             {
               image: {
                 url: "https://res.cloudinary.com/minimalindex/image/upload/v1712395037/minimal-index/hans-wegner-project-2-1.png",
                 alt: "",
               },
-              aspectRatio: 1 / 1,
+              aspectRatio: 1,
             },
             {
               image: {
                 url: "https://res.cloudinary.com/minimalindex/image/upload/v1712395037/minimal-index/hans-wegner-project-2-2.png",
                 alt: "",
               },
-              aspectRatio: 1 / 1,
+              aspectRatio: 1,
             },
             {
               image: {
                 url: "https://res.cloudinary.com/minimalindex/image/upload/v1712395037/minimal-index/hans-wegner-project-2-3.png",
                 alt: "",
               },
-              aspectRatio: 1 / 1,
+              aspectRatio: 1,
             },
             {
               title: "Ergonomic Focus",
               description:
                 "Wegner's furniture is celebrated for its comfort and ergonomics, designed to support the human body naturally and elegantly.",
-              aspectRatio: 1 / 1,
+              aspectRatio: 1,
             },
             {
               image: {
@@ -1218,14 +1218,14 @@ export const personalities: Array<Personality> = [
                 url: "https://res.cloudinary.com/minimalindex/image/upload/v1712395037/minimal-index/hans-wegner-project-2-5.png",
                 alt: "",
               },
-              aspectRatio: 1 / 1,
+              aspectRatio: 1,
             },
             {
               image: {
                 url: "https://res.cloudinary.com/minimalindex/image/upload/v1712395037/minimal-index/hans-wegner-project-2-6  .png",
                 alt: "",
               },
-              aspectRatio: 1 / 1,
+              aspectRatio: 1,
             },
           ],
         },
@@ -1253,17 +1253,80 @@ export const personalities: Array<Personality> = [
           row1: [
             {
               image: {
-                url: "https://res.cloudinary.com/minimalindex/image/upload/v1712395037/minimal-index/hans-wegner-project-1-1.png",
+                url: "https://res.cloudinary.com/minimalindex/image/upload/v1716861161/charlotte-perriand-1-1.png",
                 alt: "",
               },
-              aspectRatio: 16 / 9,
+              aspectRatio: 1,
+            },
+
+            {
+              title: "Innovative Fusion",
+              description:
+                "Charlotte Perriand masterfully combined the industrial strength of steel with the natural warmth of leather, creating furniture that was not only structurally innovative but also invitingly tactile, setting a new standard for modern design aesthetics.",
+              aspectRatio: 1,
+            },
+            {
+              image: {
+                url: "https://res.cloudinary.com/minimalindex/image/upload/v1716861161/charlotte-perriand-1-2.png",
+                alt: "",
+              },
+              aspectRatio: 1,
+            },
+            {
+              title: "Design Philosophy",
+              description:
+                "Charlotte Perriand embraced a design philosophy that prioritized functionality, simplicity, and the honest expression of materials, aiming to improve everyday life through design.",
+              aspectRatio: 1,
+            },
+            {
+              image: {
+                url: "https://res.cloudinary.com/minimalindex/image/upload/v1716861161/charlotte-perriand-1-3.png",
+                alt: "",
+              },
+              aspectRatio: 1,
+            },
+            {
+              title: "Enduring Influence",
+              description:
+                "Her work profoundly influenced the evolution of modern architecture and design, bridging cultural divides and pioneering the integration of the human experience with the environment.",
+              aspectRatio: 1,
+            },
+            {
+              image: {
+                url: "https://res.cloudinary.com/minimalindex/image/upload/v1716861161/charlotte-perriand-1-4.png",
+                alt: "",
+              },
+              aspectRatio: 1,
             },
           ],
           row2: [
             {
-              title: "todo",
-              description: "todo",
-              aspectRatio: 1 / 1,
+              image: {
+                url: "https://res.cloudinary.com/minimalindex/image/upload/v1716861161/charlotte-perriand-2-1.png",
+                alt: "",
+              },
+              aspectRatio: 16 / 9,
+            },
+            {
+              image: {
+                url: "https://res.cloudinary.com/minimalindex/image/upload/v1716861161/charlotte-perriand-2-2.png",
+                alt: "",
+              },
+              aspectRatio: 16 / 9,
+            },
+            {
+              image: {
+                url: "https://res.cloudinary.com/minimalindex/image/upload/v1716861161/charlotte-perriand-2-3.png",
+                alt: "",
+              },
+              aspectRatio: 16 / 9,
+            },
+            {
+              image: {
+                url: "https://res.cloudinary.com/minimalindex/image/upload/v1716861161/charlotte-perriand-2-4.png",
+                alt: "",
+              },
+              aspectRatio: 16 / 9.28, // alignment 🤷‍♂️
             },
           ],
         },
@@ -1275,17 +1338,100 @@ export const personalities: Array<Personality> = [
           row1: [
             {
               image: {
-                url: "https://res.cloudinary.com/minimalindex/image/upload/v1712395037/minimal-index/hans-wegner-project-1-1.png",
+                url: "https://res.cloudinary.com/minimalindex/image/upload/v1716861161/charlotte-perriand-3-1.png",
                 alt: "",
               },
-              aspectRatio: 16 / 9,
+              aspectRatio: 1,
+            },
+            {
+              image: {
+                url: "https://res.cloudinary.com/minimalindex/image/upload/v1716861161/charlotte-perriand-3-2.png",
+                alt: "",
+              },
+              aspectRatio: PI_RATIO,
+            },
+            {
+              title: "Human-Centric Design",
+              description:
+                "Charlotte Perriand's approach to the relationship between humans and their homes centered on creating spaces that not only catered to the practical aspects of daily life but also fostered emotional well-being, aiming for environments that were as nurturing as they were functional.",
+              aspectRatio: 1,
+            },
+            {
+              image: {
+                url: "https://res.cloudinary.com/minimalindex/image/upload/v1716861161/charlotte-perriand-3-3.png",
+                alt: "",
+              },
+              aspectRatio: PI_RATIO,
+            },
+            {
+              image: {
+                url: "https://res.cloudinary.com/minimalindex/image/upload/v1716861161/charlotte-perriand-3-4.png",
+                alt: "",
+              },
+              aspectRatio: 1,
+            },
+            {
+              image: {
+                url: "https://res.cloudinary.com/minimalindex/image/upload/v1716861161/charlotte-perriand-3-5.png",
+                alt: "",
+              },
+              aspectRatio: PI_RATIO,
+            },
+            {
+              image: {
+                url: "https://res.cloudinary.com/minimalindex/image/upload/v1716861161/charlotte-perriand-3-6.png",
+                alt: "",
+              },
+              aspectRatio: PI_RATIO,
             },
           ],
           row2: [
             {
-              title: "todo",
-              description: "todo",
-              aspectRatio: 1 / 1,
+              title: "Functional Harmony",
+              description:
+                "Perriand's approach to design combined the use of natural materials with modular concepts to create spaces and objects that were both aesthetically pleasing and highly practical.",
+              aspectRatio: 1,
+            },
+            {
+              image: {
+                url: "https://res.cloudinary.com/minimalindex/image/upload/v1716861161/charlotte-perriand-4-1.png",
+                alt: "",
+              },
+              aspectRatio: 16 / 9,
+            },
+            {
+              image: {
+                url: "https://res.cloudinary.com/minimalindex/image/upload/v1716861161/charlotte-perriand-4-2.png",
+                alt: "",
+              },
+              aspectRatio: 16 / 9,
+            },
+            {
+              image: {
+                url: "https://res.cloudinary.com/minimalindex/image/upload/v1716861161/charlotte-perriand-4-3.png",
+                alt: "",
+              },
+              aspectRatio: 1,
+            },
+            {
+              title: "Architectural Approach",
+              description:
+                "Her architectural vision seamlessly blended the built environment with the natural world, emphasizing light, space, and form to create structures that were both functional and in profound dialogue with their surroundings, reflecting a deep respect for the interplay between nature and human habitation.",
+              aspectRatio: 1,
+            },
+            {
+              image: {
+                url: "https://res.cloudinary.com/minimalindex/image/upload/v1716861161/charlotte-perriand-4-4.png",
+                alt: "",
+              },
+              aspectRatio: 16 / 9,
+            },
+            {
+              image: {
+                url: "https://res.cloudinary.com/minimalindex/image/upload/v1716861161/charlotte-perriand-4-5.png",
+                alt: "",
+              },
+              aspectRatio: 1,
             },
           ],
         },
