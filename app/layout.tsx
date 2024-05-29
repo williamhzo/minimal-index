@@ -12,6 +12,7 @@ const lausanne = localFont({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://minimalindex.com/"),
   title: "Minimal Index",
   description:
     "Influences of Minimalism in Art, Architecture, Design, and more.",
