@@ -116,7 +116,7 @@ export const personalities: Array<Personality> = [
             },
             {
               title: "Artist Lecture - Amie Siegel on Donald Judd",
-              description: "2021",
+              description: "2021, 58 minutes",
               video: "iBmHyspWGSM",
               aspectRatio: 4 / 3,
             },
@@ -150,8 +150,8 @@ export const personalities: Array<Personality> = [
             },
             {
               title: "Judd | MoMA EXHIBITION",
-              description: "2020",
-              video: "https://todo.com/",
+              description: "2020, 2 minutes",
+              video: "3gf6AHPKTgQ",
               aspectRatio: 4 / 3,
             },
             {
@@ -221,8 +221,8 @@ export const personalities: Array<Personality> = [
             },
             {
               title: "Ellsworth Kelly on Abstraction",
-              description: "2019",
-              video: "https://todo.com/",
+              description: "2019, 4 minutes",
+              video: "2GZiQkv9nRc",
               aspectRatio: 4 / 3,
             },
             {
