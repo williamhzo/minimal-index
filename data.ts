@@ -932,7 +932,6 @@ export const personalities: Array<Personality> = [
         "Iconic figure that profoundly shaped minimalist product design with his functional, aesthetic innovations.",
       born: "German, born 1932",
     },
-    ressources: [{ label: "", subLabel: "", link: "" }],
     quote: "Less, but better",
     projects: [
       {
@@ -941,24 +940,137 @@ export const personalities: Array<Personality> = [
         content: {
           row1: [
             {
-              title: "todo",
-              description: "todo",
               image: {
-                url: "https://picsum.photos/id/20/640/362",
+                url: "https://res.cloudinary.com/minimalindex/image/upload/v1716861228/dieter-rams-project-1-1.png",
+                alt: "",
+              },
+              aspectRatio: PI_RATIO,
+            },
+            {
+              description:
+                "At Braun, under Dieter Rams' leadership, the design team created over 500 products, ranging from shavers to audio equipment.",
+              aspectRatio: 1,
+            },
+            {
+              image: {
+                url: "https://res.cloudinary.com/minimalindex/image/upload/v1716861228/dieter-rams-project-1-2.png",
                 alt: "",
               },
               aspectRatio: 1,
             },
-          ],
-          row2: [
             {
-              title: "todo",
-              description: "todo",
               image: {
-                url: "https://picsum.photos/id/21/640/362",
+                url: "https://res.cloudinary.com/minimalindex/image/upload/v1716861228/dieter-rams-project-1-3.png",
                 alt: "",
               },
               aspectRatio: 1,
+            },
+            {
+              description:
+                "This approach created a visual and operational harmony among diverse products, making Braun's offerings distinctively recognizable and intuitively usable.",
+              aspectRatio: 1,
+            },
+            {
+              image: {
+                url: "https://res.cloudinary.com/minimalindex/image/upload/v1716861228/dieter-rams-project-1-4.png",
+                alt: "",
+              },
+              aspectRatio: 4 / 3,
+            },
+            {
+              image: {
+                url: "https://res.cloudinary.com/minimalindex/image/upload/v1716861228/dieter-rams-project-1-5.png",
+                alt: "",
+              },
+              aspectRatio: 1,
+            },
+            {
+              image: {
+                url: "https://res.cloudinary.com/minimalindex/image/upload/v1716861228/dieter-rams-project-1-6.png",
+                alt: "",
+              },
+              aspectRatio: 1,
+            },
+            {
+              image: {
+                url: "https://res.cloudinary.com/minimalindex/image/upload/v1716861228/dieter-rams-project-1-7.png",
+                alt: "",
+              },
+              aspectRatio: 4 / 3,
+            },
+            {
+              image: {
+                url: "https://res.cloudinary.com/minimalindex/image/upload/v1716861228/dieter-rams-project-1-8.png",
+                alt: "",
+              },
+              aspectRatio: 4 / 3,
+            },
+            {
+              title: "Rams Documentary",
+              description: "2018, 74 minutes",
+              video: "todo",
+              aspectRatio: 4 / 3,
+            },
+          ],
+          row2: [
+            {
+              image: {
+                url: "https://res.cloudinary.com/minimalindex/image/upload/v1716861228/dieter-rams-project-2-1.png",
+                alt: "",
+              },
+              aspectRatio: 1,
+            },
+            {
+              image: {
+                url: "https://res.cloudinary.com/minimalindex/image/upload/v1716861228/dieter-rams-project-2-2.png",
+                alt: "",
+              },
+              aspectRatio: 4 / 3,
+            },
+            {
+              image: {
+                url: "https://res.cloudinary.com/minimalindex/image/upload/v1716861228/dieter-rams-project-2-3.png",
+                alt: "",
+              },
+              aspectRatio: 16 / 9,
+            },
+            {
+              description:
+                "Rams instilled a design philosophy that emphasized a cohesive aesthetic across all product lines, ensuring that each item bore the hallmark of Braun's minimalist and functional design.",
+              aspectRatio: 1,
+            },
+            {
+              image: {
+                url: "https://res.cloudinary.com/minimalindex/image/upload/v1716861228/dieter-rams-project-2-4.png",
+                alt: "",
+              },
+              aspectRatio: 16 / 9,
+            },
+            {
+              image: {
+                url: "https://res.cloudinary.com/minimalindex/image/upload/v1716861228/dieter-rams-project-2-5.png",
+                alt: "",
+              },
+              aspectRatio: PI_RATIO,
+            },
+            {
+              description:
+                "The consistency in design not only reinforced the brand's identity but also elevated the user experience, making Braun synonymous with high-quality, well-designed consumer electronics.",
+              aspectRatio: 1,
+            },
+            {
+              image: {
+                url: "https://res.cloudinary.com/minimalindex/image/upload/v1716861228/dieter-rams-project-2-6.png",
+                alt: "",
+              },
+              aspectRatio: 16 / 9,
+            },
+            {
+              image: {
+                url: "https://res.cloudinary.com/minimalindex/image/upload/v1716861228/dieter-rams-project-2-7.png",
+                alt: "",
+              },
+              aspectRatio: 16 / 9,
             },
           ],
         },
