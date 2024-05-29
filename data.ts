@@ -1079,28 +1079,8 @@ export const personalities: Array<Personality> = [
         id: "10",
         title: "Principles",
         content: {
-          row1: [
-            {
-              title: "todo",
-              description: "todo",
-              image: {
-                url: "https://picsum.photos/id/20/640/362",
-                alt: "",
-              },
-              aspectRatio: 1,
-            },
-          ],
-          row2: [
-            {
-              title: "todo",
-              description: "todo",
-              image: {
-                url: "https://picsum.photos/id/21/640/362",
-                alt: "",
-              },
-              aspectRatio: 1,
-            },
-          ],
+          row1: [{ aspectRatio: 0 }], // custom row
+          row2: [{ aspectRatio: 0 }], // custom row
         },
       },
     ],
@@ -1460,3 +1440,82 @@ export const creators: Record<Creators, Creator> = {
     pfp: "https://res.cloudinary.com/minimalindex/image/upload/v1716744727/about-will.png",
   },
 };
+
+export type Principle = {
+  title: string;
+  content: string[];
+};
+
+export const principles: Principle[] = [
+  {
+    title: "Good design is innovative",
+    content: [
+      "The possibilities for innovation are not, by any means, exhausted.",
+      "Technological development is always offering new opportunities for innovative design.",
+      "But innovative design always develops in tandem with innovative technology, and can never be an end in itself.",
+    ],
+  },
+  {
+    title: "Good design makes a product useful",
+    content: [
+      "A product is bought to be used. It has to satisfy certain criteria, not only functional, but also psychological and aesthetic.",
+      "Good design emphasizes the usefulness of a product whilst disregarding anything that could possibly detract from it.",
+    ],
+  },
+  {
+    title: "Good design is aesthetic",
+    content: [
+      "The aesthetic quality of a product is integral to its usefulness because products we use every day affect our person and our well-being.",
+      "But only well-executed objects can be beautiful.",
+    ],
+  },
+  {
+    title: "Good design makes a product understandable",
+    content: [
+      "A product is bought to be used. It has to satisfy certain criteria, not only functional, but also psychological and aesthetic.",
+      "Good design emphasizes the usefulness of a product whilst disregarding anything that could possibly detract from it.",
+    ],
+  },
+  {
+    title: "Good design is unobtrusive",
+    content: [
+      "Products fulfilling a purpose are like tools. They are neither decorative objects nor works of art.",
+      "Their design should therefore be both neutral and restrained, to leave room for the user's self-expression.",
+    ],
+  },
+  {
+    title: "Good design is honest",
+    content: [
+      "It does not make a product more innovative, powerful or valuable than it really is.",
+      "It does not attempt to manipulate the consumer with promises that cannot be kept.",
+    ],
+  },
+  {
+    title: "Good design is long-lasting",
+    content: [
+      "It avoids being fashionable and therefore never appears antiquated.",
+      "Unlike fashionable design, it lasts many years - even in today's throwaway society.",
+    ],
+  },
+  {
+    title: "Good design is thorough down to the last detail",
+    content: [
+      "Nothing must be arbitrary or left to chance.",
+      "Care and accuracy in the design process show respect towards the user.",
+    ],
+  },
+  {
+    title: "Good design is environmentally friendly",
+    content: [
+      "Design makes an important contribution to the preservation of the environment.",
+      "It conserves resources and minimises physical and visual pollution throughout the lifecycle of the product.",
+    ],
+  },
+  {
+    title: "Good design is as little design as possible",
+    content: [
+      "Less, but better - because it concentrates on the essential aspects, and the products are not burdened with non-essentials.",
+      "Back to purity, back to simplicity.",
+    ],
+  },
+];
