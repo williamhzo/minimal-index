@@ -1007,8 +1007,8 @@ export const personalities: Array<Personality> = [
             },
             {
               title: "Rams Documentary",
-              description: "2018, 74 minutes",
-              video: "todo",
+              description: "2018, 2 minutes",
+              video: "AZU5xP5lNHk",
               aspectRatio: 4 / 3,
             },
           ],
