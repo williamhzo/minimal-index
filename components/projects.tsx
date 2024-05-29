@@ -6,10 +6,23 @@ import { ListItem } from "@/components/list-item";
 import { Quote } from "@/components/quote";
 import { Row } from "@/components/row";
 import { Youtube } from "@/components/youtube";
-import { type ProjectItem, type Project, personalities } from "@/data";
+import {
+  type ProjectItem,
+  type Project,
+  personalities,
+  principles,
+  Principle,
+} from "@/data";
+import { cn } from "@/utils";
 import Image from "next/image";
 import { usePathname, useSearchParams } from "next/navigation";
-import { FC, PropsWithChildren } from "react";
+import {
+  Dispatch,
+  FC,
+  PropsWithChildren,
+  SetStateAction,
+  useState,
+} from "react";
 
 const ROW_HEIGHT = 362;
 
@@ -66,6 +79,11 @@ const ProjectsList: FC<{ projects: Project[] }> = ({ projects }) => {
 };
 
 const ProjectItem: FC<{ project: Project }> = ({ project }) => {
+  // handle Rams' special 10 principles project
+  if (project.id === "10") {
+    return <Dieter10Principles />;
+  }
+
   return (
     <div className="flex shrink-0 flex-col gap-2">
       <ProjectRow>
@@ -74,6 +92,75 @@ const ProjectItem: FC<{ project: Project }> = ({ project }) => {
       <ProjectRow>
         <ProjectCells projects={project.content.row2} />
       </ProjectRow>
+    </div>
+  );
+};
+
+const Dieter10Principles: FC = () => {
+  const [principle, setPrinciple] = useState<Principle>(principles[0]);
+
+  return (
+    <div className="flex gap-6">
+      <div className="flex shrink-0 flex-col gap-0">
+        {principles.map((p) => (
+          <PrincipleItem
+            key={p.title}
+            handleClick={setPrinciple}
+            principle={p}
+            isActive={principle.title === p.title}
+          />
+        ))}
+      </div>
+    </div>
+  );
+};
+
+type PrincipleItemProps = PropsWithChildren & {
+  handleClick: Dispatch<SetStateAction<Principle>>;
+  principle: Principle;
+  isActive: boolean;
+};
+
+const PrincipleItem: FC<PrincipleItemProps> = ({
+  children,
+  handleClick,
+  principle,
+  isActive,
+}) => {
+  const animateClasses = "transition-colors duration-base";
+
+  return (
+    <div className={cn("flex gap-6 pt-[14px]", isActive && "pt-10")}>
+      <Column size="medium" className="relative">
+        <button
+          className={cn(
+            "flex h-full w-full items-center text-balance pb-[14px] text-left text-content-light",
+            isActive && "pb-10 text-xl text-content-bold",
+          )}
+          onClick={() => handleClick(principle)}
+        >
+          {principle.title}
+        </button>
+
+        <span className="absolute bottom-0 left-0 h-px w-full bg-background-light duration-base" />
+
+        <span
+          className={cn(
+            "absolute bottom-0 left-0 h-px w-0 bg-background-boldest transition-width duration-base",
+            isActive && "w-full",
+          )}
+        />
+      </Column>
+
+      {isActive ? (
+        <Column size="medium" className="mt-2 gap-5">
+          {principle.content.map((c) => (
+            <p key={c.slice(0, 5)} className="text-content-bold">
+              {c}
+            </p>
+          ))}
+        </Column>
+      ) : null}
     </div>
   );
 };
@@ -99,9 +186,7 @@ const ProjectRow: FC<PropsWithChildren> = ({ children }) => {
   return (
     <div
       className="flex w-full items-center gap-2"
-      style={{
-        height: ROW_HEIGHT,
-      }}
+      style={{ height: ROW_HEIGHT }}
     >
       {children}
     </div>
