@@ -36,4 +36,4 @@ yarn-error.log*
 next-env.d.ts
 
 # million
-/.million/store.json
+.million/store.json
