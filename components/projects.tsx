@@ -177,19 +177,21 @@ const Project: FC<{ project: ProjectItem }> = ({ project }) => {
     );
   } else {
     return (
-      <div className="flex flex-col gap-1 p-6">
+      <div className="flex flex-col gap-3 p-6">
         <p className="uppercase tracking-widest text-content-bold">
           {project.title}
         </p>
-        {Array.isArray(project.description) ? (
-          project.description.map((desc) => (
-            <p key={desc.slice(0, 5)}>{desc}</p>
-          ))
-        ) : project.aspectRatio === 19 / 9 && project.description ? (
-          <Quote quote={project.description} />
-        ) : (
-          <p>{project.description}</p>
-        )}
+        <span className="space-y-2">
+          {Array.isArray(project.description) ? (
+            project.description.map((desc) => (
+              <p key={desc.slice(0, 5)}>{desc}</p>
+            ))
+          ) : project.aspectRatio === 19 / 9 && project.description ? (
+            <Quote quote={project.description} />
+          ) : (
+            <p>{project.description}</p>
+          )}
+        </span>
       </div>
     );
   }
