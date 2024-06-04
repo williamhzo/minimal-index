@@ -1,7 +1,7 @@
 import { cn } from "@/utils";
 import { FC, PropsWithChildren } from "react";
 
-const sizeToWidth: Record<NonNullable<ColumnProps["size"]>, number> = {
+export const sizeToWidth: Record<NonNullable<ColumnProps["size"]>, number> = {
   small: 256,
   medium: 396,
   large: 536,
