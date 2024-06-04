@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@radix-ui/react-aspect-ratio": "^1.0.3",
+    "@radix-ui/react-hover-card": "^1.0.7",
     "clsx": "^2.1.0",
     "lodash": "^4.17.21",
     "next": "14.2.3",
@@ -30,6 +31,7 @@
     "prettier": "^3.2.5",
     "prettier-plugin-tailwindcss": "^0.5.11",
     "tailwindcss": "^3.3.0",
+    "tailwindcss-animate": "^1.0.7",
     "typescript": "^5"
   }
 }
