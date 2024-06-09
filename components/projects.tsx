@@ -15,12 +15,13 @@ import {
 } from "@/data";
 import { cn } from "@/utils";
 import Image from "next/image";
-import { usePathname, useSearchParams } from "next/navigation";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import {
   Dispatch,
   FC,
   PropsWithChildren,
   SetStateAction,
+  useEffect,
   useState,
 } from "react";
 
@@ -31,8 +32,23 @@ export const ProjectsContent: FC<{ personalityId: string }> = ({
 }) => {
   const projects = personalities.find((p) => p.id === personalityId)?.projects;
   const searchParams = useSearchParams();
+  const pathname = usePathname();
   const projectId = searchParams.get("pj");
   const project = projects?.find((p) => p.id === projectId);
+
+  const router = useRouter();
+
+  useEffect(() => {
+    function createQueryString(name: string, value: string) {
+      const params = new URLSearchParams(searchParams.toString());
+      params.set(name, value);
+      return params.toString();
+    }
+
+    if (projects && !projectId) {
+      router.replace(pathname + "?" + createQueryString("pj", projects[0].id));
+    }
+  }, [pathname, projectId, searchParams, projects, router]);
 
   if (!projects) {
     return null;

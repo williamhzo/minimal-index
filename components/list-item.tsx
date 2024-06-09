@@ -1,12 +1,14 @@
 import { Row } from "@/components/row";
 import { cn } from "@/utils";
 import Link, { LinkProps } from "next/link";
-import { FC, PropsWithChildren } from "react";
+import { FC, MouseEventHandler, PropsWithChildren } from "react";
 
 type ListItemProps = PropsWithChildren &
   LinkProps & {
     subtitle?: string;
     selected?: boolean;
+    onMouseEnter?: MouseEventHandler<HTMLAnchorElement>;
+    onMouseLeave?: MouseEventHandler<HTMLAnchorElement>;
   };
 
 export const ListItem: FC<ListItemProps> = ({
@@ -14,6 +16,8 @@ export const ListItem: FC<ListItemProps> = ({
   subtitle,
   href,
   selected,
+  onMouseEnter,
+  onMouseLeave,
 }) => {
   const animateClasses = "transition-colors duration-base";
 
@@ -27,6 +31,8 @@ export const ListItem: FC<ListItemProps> = ({
           animateClasses,
           selected && "text-content-bold",
         )}
+        onMouseEnter={onMouseEnter}
+        onMouseLeave={onMouseLeave}
       >
         {children}
 
