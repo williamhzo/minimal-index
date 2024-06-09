@@ -1,7 +1,7 @@
 import { Row } from "@/components/row";
 import { cn } from "@/utils";
 import Link, { LinkProps } from "next/link";
-import { FC, PropsWithChildren, forwardRef } from "react";
+import { FC, PropsWithChildren } from "react";
 
 type ListItemProps = PropsWithChildren &
   LinkProps & {
@@ -9,16 +9,17 @@ type ListItemProps = PropsWithChildren &
     selected?: boolean;
   };
 
-export const ListItem: FC<ListItemProps> = forwardRef<
-  HTMLAnchorElement,
-  ListItemProps
->(({ children, subtitle, href, selected }, ref) => {
+export const ListItem: FC<ListItemProps> = ({
+  children,
+  subtitle,
+  href,
+  selected,
+}) => {
   const animateClasses = "transition-colors duration-base";
 
   return (
-    <Row className="relative w-full">
+    <Row className="relative">
       <Link
-        ref={ref}
         href={href}
         className={cn(
           "group flex h-full w-full items-center gap-2 text-content-light",
@@ -54,6 +55,4 @@ export const ListItem: FC<ListItemProps> = forwardRef<
       </Link>
     </Row>
   );
-});
-
-ListItem.displayName = "ListItem";
+};
