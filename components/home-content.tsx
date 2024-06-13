@@ -11,6 +11,7 @@ import {
   MouseEventHandler,
   PropsWithChildren,
   useMemo,
+  useRef,
   useState,
 } from "react";
 import sortBy from "lodash/sortBy";
@@ -38,7 +39,16 @@ export const HomeContent = () => {
   const personalityId = searchParams.get("p");
   const projects = personalities.find((p) => p.id === personalityId)?.projects;
 
+  const scrollToRef = useRef<HTMLDivElement>(null);
+
   function handleSelect(id: string) {
+    if (scrollToRef.current) {
+      scrollToRef.current.scrollIntoView({
+        behavior: "smooth",
+        inline: "start",
+      });
+    }
+
     const initialProjectId =
       personalities.find((p) => p.id === id)?.projects[0].id ?? "";
 
@@ -47,17 +57,7 @@ export const HomeContent = () => {
     params.set("pj", initialProjectId);
 
     router.push(pathname + "?" + params);
-
-    const presentation = document.getElementById("bio");
-    if (presentation) {
-      presentation.scrollIntoView({
-        behavior: "smooth",
-        inline: "start",
-      });
-    }
   }
-
-  const showPlaceholder = !personalityId && !projects && !hoveredId;
 
   return (
     <div className="mr-12 flex h-full w-full gap-0">
@@ -78,7 +78,7 @@ export const HomeContent = () => {
           ))}
         </Column>
 
-        <div className="flex" id="bio">
+        <div className="flex" ref={scrollToRef}>
           {!!hoveredId || !!personalityId ? (
             <Presentation
               hideQuote={!!hoveredId || !personalityId}
