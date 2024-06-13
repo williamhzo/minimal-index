@@ -6,21 +6,12 @@ import { personalities } from "@/data";
 import { FC, useState } from "react";
 import sortBy from "lodash/sortBy";
 import { usePathname, useSearchParams } from "next/navigation";
-import { removeAccents } from "@/utils";
+import { createQueryString, removeAccents } from "@/utils";
 import { Presentation } from "@/components/presentation";
 
 export const People: FC = () => {
   const pathname = usePathname();
   const searchParams = useSearchParams();
-
-  const [hoveredId, setHoveredId] = useState<string | null>(null);
-
-  function createQueryString(name: string, value: string) {
-    const params = new URLSearchParams(searchParams.toString());
-    params.set(name, value);
-    params.delete("pj");
-    return params.toString();
-  }
 
   const sortedPersonalities = sortBy(personalities, [
     (p) => p.disciplineId,
@@ -28,24 +19,29 @@ export const People: FC = () => {
   ]);
 
   return (
-    <div className="flex gap-6">
+    <div className="flex gap-0">
       <Column size="medium">
         {sortedPersonalities.map((personality) => {
           return (
             <ListItem
               key={personality.id}
-              href={pathname + "?" + createQueryString("p", personality.id)}
+              href={
+                pathname +
+                "?" +
+                createQueryString({
+                  name: "p",
+                  value: personality.id,
+                  searchParams,
+                  queryToRemove: "pj",
+                })
+              }
               selected={searchParams.get("p") === personality.id}
-              onMouseEnter={() => setHoveredId(personality.id)}
-              onMouseLeave={() => setHoveredId(null)}
             >
               {personality.name}
             </ListItem>
           );
         })}
       </Column>
-
-      {hoveredId && <Presentation personalityId={hoveredId} />}
     </div>
   );
 };

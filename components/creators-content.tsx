@@ -5,18 +5,13 @@ import { ExternalLink } from "@/components/external-link";
 import { ListItem } from "@/components/list-item";
 import { Row } from "@/components/row";
 import { creators } from "@/data";
+import { createQueryString } from "@/utils";
 import Image from "next/image";
 import { usePathname, useSearchParams } from "next/navigation";
 
 export const CreatorsContent = () => {
   const pathname = usePathname();
   const searchParams = useSearchParams();
-
-  function createQueryString(name: string, value: string) {
-    const params = new URLSearchParams(searchParams.toString());
-    params.set(name, value);
-    return params.toString();
-  }
 
   const creator = searchParams.get("c") as keyof typeof creators;
   const hasValidSearchParams =
@@ -27,14 +22,30 @@ export const CreatorsContent = () => {
       <Column>
         <ListItem
           subtitle="Product Designer"
-          href={pathname + "?" + createQueryString("c", "micka")}
+          href={
+            pathname +
+            "?" +
+            createQueryString({
+              name: "c",
+              value: "micka",
+              searchParams,
+            })
+          }
           selected={searchParams.get("c") === "micka"}
         >
           Micka Touillaud
         </ListItem>
         <ListItem
           subtitle="Product Engineer"
-          href={pathname + "?" + createQueryString("c", "william")}
+          href={
+            pathname +
+            "?" +
+            createQueryString({
+              name: "c",
+              value: "william",
+              searchParams,
+            })
+          }
           selected={searchParams.get("c") === "william"}
         >
           William Hermozo
