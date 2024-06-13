@@ -9,9 +9,13 @@ import { FC } from "react";
 
 type PresentationProps = {
   personalityId: Personality["id"];
+  hideQuote?: boolean;
 };
 
-export const Presentation: FC<PresentationProps> = ({ personalityId }) => {
+export const Presentation: FC<PresentationProps> = ({
+  personalityId,
+  hideQuote = false,
+}) => {
   const personality = personalities.find((p) => p.id === personalityId);
 
   if (!personality) {
@@ -19,7 +23,7 @@ export const Presentation: FC<PresentationProps> = ({ personalityId }) => {
   }
 
   return (
-    <Column className="gap-24" size="large">
+    <Column className="gap-24 pl-6" size="large">
       <div className="flex gap-6">
         <figure className="relative shrink-0">
           <Image
@@ -42,7 +46,7 @@ export const Presentation: FC<PresentationProps> = ({ personalityId }) => {
         </div>
       </div>
 
-      <Quote quote={personality.quote} />
+      {!hideQuote && <Quote quote={personality.quote} />}
     </Column>
   );
 };
