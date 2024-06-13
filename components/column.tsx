@@ -1,25 +1,28 @@
 import { cn } from "@/utils";
-import { FC, PropsWithChildren } from "react";
+import { ComponentProps, FC, PropsWithChildren } from "react";
 
-const sizeToWidth: Record<NonNullable<ColumnProps["size"]>, number> = {
+export const sizeToWidth: Record<NonNullable<ColumnProps["size"]>, number> = {
   small: 256,
   medium: 396,
   large: 536,
   xlarge: 762,
 };
 
-type ColumnProps = PropsWithChildren & {
-  size?: "small" | "medium" | "large" | "xlarge";
-  className?: string;
-};
+type ColumnProps = ComponentProps<"div"> &
+  PropsWithChildren & {
+    size?: "small" | "medium" | "large" | "xlarge";
+    className?: string;
+  };
 
 export const Column: FC<ColumnProps> = ({
   children,
   size = "small",
   className,
+  ...props
 }) => {
   return (
     <div
+      {...props}
       className={cn("flex shrink-0 flex-col items-start", className)}
       style={{
         width: `${sizeToWidth[size]}px`,
