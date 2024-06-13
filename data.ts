@@ -97,7 +97,7 @@ export const personalities: Array<Personality> = [
             },
             {
               description:
-                "His wall-mounted “stacks,” shelf-like structures, and freestanding multicolored works were made from commercial materials and fabricated in factories.",
+                "He worked as an art critic and writer throughout his career and, in 1965, penned “Specific Objects,” a seminal essay on Minimalist art.",
               aspectRatio: 1,
             },
             {
@@ -247,17 +247,17 @@ export const personalities: Array<Personality> = [
             {
               links: [
                 {
-                  label: "Lorem Ipsum",
+                  label: "Lorem Ipsum1",
                   subLabel: "TBC",
                   url: "https://todo.com/",
                 },
                 {
-                  label: "Lorem Ipsum",
+                  label: "Lorem Ipsum2",
                   subLabel: "TBC",
                   url: "https://todo.com/",
                 },
                 {
-                  label: "Lorem Ipsum",
+                  label: "Lorem Ipsum3",
                   subLabel: "TBC",
                   url: "https://todo.com/",
                 },
