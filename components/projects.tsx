@@ -13,7 +13,7 @@ import {
   principles,
   Principle,
 } from "@/data";
-import { cn } from "@/utils";
+import { cn, createQueryString } from "@/utils";
 import Image from "next/image";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import {
@@ -21,43 +21,19 @@ import {
   FC,
   PropsWithChildren,
   SetStateAction,
-  useEffect,
   useState,
 } from "react";
 
 const ROW_HEIGHT = 362;
 
-export const ProjectsContent: FC<{ personalityId: string }> = ({
-  personalityId,
-}) => {
-  const projects = personalities.find((p) => p.id === personalityId)?.projects;
+export const ProjectsContent: FC<{ projects: Project[] }> = ({ projects }) => {
   const searchParams = useSearchParams();
-  const pathname = usePathname();
-  const projectId = searchParams.get("pj");
-  const project = projects?.find((p) => p.id === projectId);
-
-  const router = useRouter();
-
-  useEffect(() => {
-    function createQueryString(name: string, value: string) {
-      const params = new URLSearchParams(searchParams.toString());
-      params.set(name, value);
-      return params.toString();
-    }
-
-    if (projects && !projectId) {
-      router.replace(pathname + "?" + createQueryString("pj", projects[0].id));
-    }
-  }, [pathname, projectId, searchParams, projects, router]);
-
-  if (!projects) {
-    return null;
-  }
+  const project = projects.find((p) => p.id === searchParams.get("pj"));
 
   return projects.length > 1 ? (
     <>
       <ProjectsList projects={projects} />
-      {project && <ProjectItem project={project} />}
+      <ProjectItem project={project || projects[0]} />
     </>
   ) : (
     <ProjectItem project={projects[0]} />
@@ -68,22 +44,24 @@ const ProjectsList: FC<{ projects: Project[] }> = ({ projects }) => {
   const searchParams = useSearchParams();
   const pathname = usePathname();
 
-  function createQueryString(name: string, value: string) {
-    const params = new URLSearchParams(searchParams.toString());
-    params.set(name, value);
-    return params.toString();
-  }
-
   function hasLongTitle(projects: Project[]) {
     return projects.some((p) => p.title.length > 25);
   }
 
   return (
-    <Column size={hasLongTitle(projects) ? "medium" : "small"}>
+    <Column className="pl-6" size={hasLongTitle(projects) ? "medium" : "small"}>
       {projects.map((p) => (
         <ListItem
           key={p.title}
-          href={pathname + "?" + createQueryString("pj", p.id)}
+          href={
+            pathname +
+            "?" +
+            createQueryString({
+              name: "pj",
+              value: p.id,
+              searchParams,
+            })
+          }
           subtitle={p.id}
           selected={searchParams.get("pj") === p.id}
         >
@@ -95,13 +73,12 @@ const ProjectsList: FC<{ projects: Project[] }> = ({ projects }) => {
 };
 
 const ProjectItem: FC<{ project: Project }> = ({ project }) => {
-  // handle Rams' special 10 principles project
   if (project.id === "10") {
     return <Dieter10Principles />;
   }
 
   return (
-    <div className="flex shrink-0 flex-col gap-2">
+    <div className="flex shrink-0 flex-col gap-2 pl-6">
       <ProjectRow>
         <ProjectCells projects={project.content.row1} />
       </ProjectRow>

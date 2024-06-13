@@ -2,63 +2,154 @@
 
 import { Disciplines } from "@/components/disciplines";
 import { ProjectsContent } from "@/components/projects";
-import { usePathname, useSearchParams } from "next/navigation";
+import { usePathname, useSearchParams, useRouter } from "next/navigation";
 import { Column } from "@/components/column";
-import { ListItem } from "@/components/list-item";
 import { personalities } from "@/data";
-import { useState } from "react";
+import {
+  ComponentProps,
+  FC,
+  MouseEventHandler,
+  PropsWithChildren,
+  useMemo,
+  useState,
+} from "react";
 import sortBy from "lodash/sortBy";
-import { removeAccents } from "@/utils";
+import { cn, removeAccents } from "@/utils";
 import { Presentation } from "@/components/presentation";
+import { Row } from "@/components/row";
 
 export const HomeContent = () => {
   const [hoveredId, setHoveredId] = useState<string | null>(null);
 
   const pathname = usePathname();
   const searchParams = useSearchParams();
-  const personalityId = searchParams.get("p");
 
-  function createQueryString(name: string, value: string) {
+  const sortedPersonalities = useMemo(
+    () =>
+      sortBy(personalities, [
+        (p) => p.disciplineId,
+        (p) => removeAccents(p.name),
+      ]),
+    [],
+  );
+
+  const router = useRouter();
+
+  const personalityId = searchParams.get("p");
+  const projects = personalities.find((p) => p.id === personalityId)?.projects;
+
+  function handleSelect(id: string) {
+    const initialProjectId =
+      personalities.find((p) => p.id === id)?.projects[0].id ?? "";
+
     const params = new URLSearchParams(searchParams.toString());
-    params.set(name, value);
-    params.delete("pj");
-    return params.toString();
+    params.set("p", id);
+    params.set("pj", initialProjectId);
+
+    router.push(pathname + "?" + params);
+
+    const presentation = document.getElementById("bio");
+    if (presentation) {
+      presentation.scrollIntoView({
+        behavior: "smooth",
+        inline: "start",
+      });
+    }
   }
 
-  const sortedPersonalities = sortBy(personalities, [
-    (p) => p.disciplineId,
-    (p) => removeAccents(p.name),
-  ]);
+  const showPlaceholder = !personalityId && !projects && !hoveredId;
 
   return (
     <div className="mr-12 flex h-full w-full gap-0">
       <Disciplines />
 
-      <div className="flex gap-6">
+      <div className="flex">
         <Column size="medium">
-          {sortedPersonalities.map((personality) => {
-            return (
-              <ListItem
-                key={personality.id}
-                href={pathname + "?" + createQueryString("p", personality.id)}
-                selected={searchParams.get("p") === personality.id}
-                onMouseEnter={() => setHoveredId(personality.id)}
-                onMouseLeave={() => setHoveredId(null)}
-              >
-                {personality.name}
-              </ListItem>
-            );
-          })}
+          {sortedPersonalities.map((personality) => (
+            <PersonalityItem
+              key={personality.id}
+              handleClick={() => handleSelect(personality.id)}
+              selected={personalityId === personality.id}
+              onMouseEnter={() => setHoveredId(personality.id)}
+              onMouseLeave={() => setHoveredId(null)}
+            >
+              {personality.name}
+            </PersonalityItem>
+          ))}
         </Column>
 
-        {hoveredId ? <Presentation personalityId={hoveredId} /> : null}
-        {personalityId && !hoveredId ? (
-          <>
-            <Presentation personalityId={personalityId} />
-            <ProjectsContent personalityId={personalityId} />
-          </>
-        ) : null}
+        <div className="flex" id="bio">
+          {!!hoveredId || !!personalityId ? (
+            <Presentation
+              hideQuote={!!hoveredId || !personalityId}
+              personalityId={(hoveredId || personalityId) as string}
+            />
+          ) : null}
+
+          {projects ? <ProjectsContent projects={projects} /> : null}
+        </div>
       </div>
     </div>
+  );
+};
+
+type PersonalityItemProps = PropsWithChildren &
+  ComponentProps<"button"> & {
+    subtitle?: string;
+    selected?: boolean;
+    onMouseEnter?: MouseEventHandler<HTMLButtonElement>;
+    onMouseLeave?: MouseEventHandler<HTMLButtonElement>;
+    handleClick: MouseEventHandler<HTMLButtonElement>;
+  };
+
+const PersonalityItem: FC<PersonalityItemProps> = ({
+  children,
+  subtitle,
+  selected,
+  onMouseEnter,
+  onMouseLeave,
+  handleClick,
+}) => {
+  const animateClasses = "transition-colors duration-base";
+
+  return (
+    <Row className="relative">
+      <button
+        className={cn(
+          "group flex h-full w-full items-center gap-2 text-content-light",
+          "hover:text-content-medium focus:text-content-bold focus-visible:outline-none",
+          animateClasses,
+          selected && "text-content-bold",
+        )}
+        onMouseEnter={onMouseEnter}
+        onMouseLeave={onMouseLeave}
+        onClick={handleClick}
+      >
+        {children}
+
+        {subtitle && (
+          <span
+            className={cn(
+              "text-content-lightest",
+              "group-hover:text-content-light group-focus:text-content-medium",
+              animateClasses,
+              selected && "text-content-medium",
+            )}
+          >
+            {subtitle}
+          </span>
+        )}
+
+        <span className="absolute bottom-0 left-0 h-px w-full bg-background-light duration-base" />
+
+        <span
+          className={cn(
+            "absolute bottom-0 left-0 h-px w-0 bg-background-boldest transition-width duration-base",
+            "group-focus:w-full",
+            selected && "w-full",
+          )}
+        />
+      </button>
+    </Row>
   );
 };
