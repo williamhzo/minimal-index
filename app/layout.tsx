@@ -38,7 +38,7 @@ export default function RootLayout({
               <Title />
             </header>
 
-            <main className="px-[--global-padding] pt-[calc(var(--title-height)+var(--global-padding))]">
+            <main className="px-[--global-padding] pb-[calc(14.5px+var(--global-padding))] pt-[calc(var(--title-height)+var(--global-padding))]">
               {children}
             </main>
 

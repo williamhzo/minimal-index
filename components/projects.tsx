@@ -161,12 +161,13 @@ const PrincipleItem: FC<PrincipleItemProps> = ({
 const ProjectCells: FC<{ projects: Array<ProjectItem> }> = ({ projects }) => {
   return projects.map((p, i) => (
     <div
+      className="h-full flex-grow"
       key={
         p.image?.url ||
         (Array.isArray(p.description) ? p.description[0] : p.description) ||
         i
       }
-      style={{ width: ROW_HEIGHT * p.aspectRatio }}
+      style={{ minHeight: ROW_HEIGHT, aspectRatio: p.aspectRatio }}
     >
       <AspectRatio ratio={p.aspectRatio} className="grid place-items-center">
         <Project project={p} />
@@ -177,12 +178,7 @@ const ProjectCells: FC<{ projects: Array<ProjectItem> }> = ({ projects }) => {
 
 const ProjectRow: FC<PropsWithChildren> = ({ children }) => {
   return (
-    <div
-      className="flex w-full items-center gap-2"
-      style={{ height: ROW_HEIGHT }}
-    >
-      {children}
-    </div>
+    <div className="flex w-full flex-grow items-center gap-2">{children}</div>
   );
 };
 
