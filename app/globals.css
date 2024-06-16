@@ -6,6 +6,7 @@
   :root {
     font-size: var(--font-size-base);
     line-height: var(--line-height-base);
+    --min-row-height: 200px;
 
     --row-height: 48px;
     --title-height: 35px;

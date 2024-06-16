@@ -24,8 +24,6 @@ import {
   useState,
 } from "react";
 
-const ROW_HEIGHT = 362;
-
 export const ProjectsContent: FC<{ projects: Project[] }> = ({ projects }) => {
   const searchParams = useSearchParams();
   const project = projects.find((p) => p.id === searchParams.get("pj"));
@@ -161,13 +159,13 @@ const PrincipleItem: FC<PrincipleItemProps> = ({
 const ProjectCells: FC<{ projects: Array<ProjectItem> }> = ({ projects }) => {
   return projects.map((p, i) => (
     <div
-      className="h-full flex-grow"
+      className="h-full min-h-[--min-row-height] flex-grow"
       key={
         p.image?.url ||
         (Array.isArray(p.description) ? p.description[0] : p.description) ||
         i
       }
-      style={{ minHeight: ROW_HEIGHT, aspectRatio: p.aspectRatio }}
+      style={{ aspectRatio: p.aspectRatio }}
     >
       <AspectRatio ratio={p.aspectRatio} className="grid place-items-center">
         <Project project={p} />
