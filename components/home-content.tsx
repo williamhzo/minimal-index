@@ -42,13 +42,6 @@ export const HomeContent = () => {
   const scrollToRef = useRef<HTMLDivElement>(null);
 
   function handleSelect(id: string) {
-    if (scrollToRef.current) {
-      scrollToRef.current.scrollIntoView({
-        behavior: "smooth",
-        inline: "start",
-      });
-    }
-
     const initialProjectId =
       personalities.find((p) => p.id === id)?.projects[0].id ?? "";
 
@@ -57,6 +50,16 @@ export const HomeContent = () => {
     params.set("pj", initialProjectId);
 
     router.push(pathname + "?" + params);
+
+    // FIXME: annoying hack to ensure the projects are populated before scroll happens.
+    setTimeout(() => {
+      if (scrollToRef.current) {
+        scrollToRef.current.scrollIntoView({
+          behavior: "smooth",
+          inline: "start",
+        });
+      }
+    }, 100);
   }
 
   return (
