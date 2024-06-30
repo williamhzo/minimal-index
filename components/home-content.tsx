@@ -10,7 +10,6 @@ import {
   FC,
   MouseEventHandler,
   PropsWithChildren,
-  useEffect,
   useMemo,
   useRef,
   useState,
@@ -19,10 +18,8 @@ import sortBy from "lodash/sortBy";
 import { cn, removeAccents } from "@/utils";
 import { Presentation } from "@/components/presentation";
 import { Row } from "@/components/row";
-import { Splash } from "@/components/splash";
 
 export const HomeContent = () => {
-  const [showSplash, setShowSplash] = useState(true);
   const [hoveredId, setHoveredId] = useState<string | null>(null);
 
   const pathname = usePathname();
@@ -63,16 +60,6 @@ export const HomeContent = () => {
         });
       }
     }, 100);
-  }
-
-  useEffect(() => {
-    if (showSplash) {
-      setTimeout(() => setShowSplash(false), 2500);
-    }
-  }, [showSplash]);
-
-  if (showSplash) {
-    return <Splash />;
   }
 
   return (

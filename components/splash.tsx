@@ -1,37 +1,37 @@
 import { cn } from "@/utils";
-import { FC, useEffect, useState } from "react";
+import { motion } from "framer-motion";
+import { FC } from "react";
 
 export const Splash: FC = () => {
-  const [showAll, setShowAll] = useState(false);
-
   const title = "minimal index";
   const splitTitle = title.split(" ").map((word) => word.split(""));
 
-  useEffect(() => {
-    const to = setTimeout(() => setShowAll(true), 1000);
-    return () => clearTimeout(to);
-  }, [showAll]);
-
   return (
     <div className="absolute inset-0 z-50 grid place-items-center bg-background">
-      <div className="flex items-center gap-24">
+      <motion.div
+        className="flex items-center gap-24"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 1 }}
+      >
         <h1 className="flex select-none gap-8 text-lg uppercase text-content">
           {splitTitle.map((word, wordIndex) => (
             <span key={wordIndex} className="flex gap-3">
               {word.map((letter, letterIndex) => (
-                <span
+                <motion.span
                   key={letterIndex}
-                  className={cn(
-                    "transition-colors duration-500",
-                    letterIndex === 0
-                      ? "text-content"
-                      : showAll
-                        ? "text-content"
-                        : "text-background",
-                  )}
+                  className="text-content transition-colors duration-500"
+                  initial={{ opacity: letterIndex === 0 ? 1 : 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{
+                    delay: letterIndex * 0.04 + wordIndex * 0.2,
+                    duration: 0.3,
+                  }}
                 >
                   {letter}
-                </span>
+                </motion.span>
               ))}
               {wordIndex < splitTitle.length - 1 ? " " : ""}
             </span>
@@ -39,25 +39,39 @@ export const Splash: FC = () => {
         </h1>
 
         <span className="flex gap-4 uppercase">
-          <h2
+          <motion.h2
             className={cn(
-              "border-b-[0.5px] border-background-light tracking-widest transition-colors duration-500",
-              showAll ? "text-content-bold" : "text-content-lightest",
+              "border-b-[0.5px] border-background-light tracking-widest transition-colors duration-base",
             )}
+            initial={{ color: "var(--foreground-lightest)" }}
+            animate={{ color: "var(--foreground-bold)" }}
+            exit={{ color: "var(--foreground-lightest)" }}
+            transition={{
+              duration: 0.5,
+              delay: 0.7,
+              ease: "easeInOut",
+            }}
           >
             Influences of minimalism
-          </h2>
+          </motion.h2>
 
-          <p
+          <motion.p
             className={cn(
-              "text-content-lightst border-b-[0.5px] border-background-light tracking-widest transition-opacity duration-500",
-              showAll ? "opacity-100" : "opacity-0",
+              "border-b-[0.5px] border-background-light tracking-widest text-content-lightest transition-opacity duration-base",
             )}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{
+              duration: 0.5,
+              delay: 1.2,
+              ease: "easeInOut",
+            }}
           >
             Keyboard enabled
-          </p>
+          </motion.p>
         </span>
-      </div>
+      </motion.div>
     </div>
   );
 };
