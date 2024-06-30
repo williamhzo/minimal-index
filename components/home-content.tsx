@@ -66,30 +66,30 @@ export const HomeContent: FC = () => {
     }, 100);
   }
 
-  const scrollContainerRef = useRef<HTMLDivElement>(null);
+  // const scrollContainerRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    const current = scrollContainerRef.current;
+  // useEffect(() => {
+  //   const current = scrollContainerRef.current;
 
-    const handleWheel = (event: WheelEvent) => {
-      if (current) {
-        if (event.deltaY !== 0) {
-          event.preventDefault();
-          current.scrollLeft += event.deltaY;
-        }
-      }
-    };
+  //   const handleWheel = (event: WheelEvent) => {
+  //     if (current) {
+  //       if (event.deltaY !== 0) {
+  //         event.preventDefault();
+  //         current.scrollLeft += event.deltaY;
+  //       }
+  //     }
+  //   };
 
-    if (current) {
-      current.addEventListener("wheel", handleWheel);
-    }
+  //   if (current) {
+  //     current.addEventListener("wheel", handleWheel);
+  //   }
 
-    return () => {
-      if (current) {
-        current.removeEventListener("wheel", handleWheel);
-      }
-    };
-  }, [projects?.length]);
+  //   return () => {
+  //     if (current) {
+  //       current.removeEventListener("wheel", handleWheel);
+  //     }
+  //   };
+  // }, []);
 
   useEffect(() => {
     if (showSplash) {
@@ -100,10 +100,11 @@ export const HomeContent: FC = () => {
 
   return (
     <>
-      <Splash show={showSplash} />
+      {showSplash && <Splash show={showSplash} />}
       <motion.div
-        ref={scrollContainerRef}
-        className="mr-12 flex h-full w-full gap-0 overflow-x-auto overflow-y-hidden"
+        // ref={scrollContainerRef}
+        // className="mr-12 flex h-full w-full gap-0 overflow-x-auto overflow-y-hidden"
+        className="mr-12 flex h-full w-full gap-0"
         animate={!showSplash && { opacity: 1 }}
         transition={{
           duration: 0.3,

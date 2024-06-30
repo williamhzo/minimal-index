@@ -52,6 +52,11 @@
   ::-webkit-scrollbar {
     display: none;
   }
+
+  /* body,
+  html {
+    overflow: hidden;
+  } */
 }
 
 @layer utilities {
