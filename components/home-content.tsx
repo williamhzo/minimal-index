@@ -67,7 +67,7 @@ export const HomeContent = () => {
 
   useEffect(() => {
     if (showSplash) {
-      setTimeout(() => setShowSplash(false), 2000);
+      setTimeout(() => setShowSplash(false), 2500);
     }
   }, [showSplash]);
 
