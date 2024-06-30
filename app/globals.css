@@ -36,10 +36,6 @@
     scrollbar-width: none;
   }
 
-  ::-webkit-scrollbar {
-    display: none;
-  }
-
   .dark {
     --foreground-bold: #ecedee;
     --foreground-medium: #bfbfbf;
@@ -51,6 +47,10 @@
     --background-medium: #333333;
     --background-light: #262626;
     --background-lightest: #121212;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
   }
 }
 

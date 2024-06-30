@@ -2,12 +2,17 @@ import { cn } from "@/utils";
 import { motion } from "framer-motion";
 import { FC } from "react";
 
-export const Splash: FC = () => {
+export const Splash: FC<{ show: boolean }> = ({ show }) => {
   const title = "minimal index";
   const splitTitle = title.split(" ").map((word) => word.split(""));
 
   return (
-    <div className="absolute inset-0 z-50 grid place-items-center bg-background">
+    <motion.div
+      className="absolute inset-0 z-50 grid place-items-center bg-background"
+      animate={{ opacity: show ? 1 : 0 }}
+      transition={{ duration: 0.5 }}
+      exit={{ opacity: 0 }}
+    >
       <motion.div
         className="flex items-center gap-24"
         initial={{ opacity: 0 }}
@@ -72,6 +77,6 @@ export const Splash: FC = () => {
           </motion.p>
         </span>
       </motion.div>
-    </div>
+    </motion.div>
   );
 };
