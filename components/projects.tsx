@@ -176,7 +176,7 @@ const ProjectCells: FC<{ projects: Array<ProjectItem> }> = ({ projects }) => {
 
 const ProjectRow: FC<PropsWithChildren> = ({ children }) => {
   return (
-    <div className="flex w-full flex-grow items-center gap-2">{children}</div>
+    <div className="flex w-fit flex-grow items-center gap-2">{children}</div>
   );
 };
 
