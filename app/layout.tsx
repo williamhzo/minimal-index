@@ -1,10 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
-import { ThemeSwitcher } from "@/components/theme-switcher";
-import { Title } from "@/components/title";
-import { FooterLink } from "@/components/footer-link";
 import localFont from "next/font/local";
+import { MainContent } from "@/components/main-content";
 
 const lausanne = localFont({
   src: "./lausanne-300.ttf",
@@ -33,22 +31,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={lausanne.className + " bg-background"}>
         <ThemeProvider>
-          <div className="relative flex min-h-dvh gap-16 py-[--global-padding] text-content-medium">
-            <header className="fixed left-[--global-padding] top-[--global-padding] z-10">
-              <Title />
-            </header>
-
-            <main className="flex px-[--global-padding] pb-[calc(14.5px+var(--global-padding))] pt-[calc(var(--title-height)+var(--global-padding))]">
-              {children}
-            </main>
-
-            <footer className="fixed bottom-[--global-padding] left-[--global-padding] z-10 flex gap-6">
-              <FooterLink href="/">Influences of Minimalism</FooterLink>
-              <FooterLink href="/about/genesis">About</FooterLink>
-            </footer>
-
-            <ThemeSwitcher className="fixed bottom-[--global-padding] right-[--global-padding] z-10" />
-          </div>
+          <MainContent>{children}</MainContent>
         </ThemeProvider>
       </body>
     </html>

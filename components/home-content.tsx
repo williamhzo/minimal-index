@@ -1,6 +1,5 @@
 "use client";
 
-import { Splash } from "@/components/splash";
 import { Disciplines } from "@/components/disciplines";
 import { ProjectsContent } from "@/components/projects";
 import { usePathname, useSearchParams, useRouter } from "next/navigation";
@@ -11,7 +10,6 @@ import {
   FC,
   MouseEventHandler,
   PropsWithChildren,
-  useEffect,
   useMemo,
   useRef,
   useState,
@@ -20,10 +18,8 @@ import sortBy from "lodash/sortBy";
 import { cn, removeAccents } from "@/utils";
 import { Presentation } from "@/components/presentation";
 import { Row } from "@/components/row";
-import { motion } from "framer-motion";
 
 export const HomeContent: FC = () => {
-  const [showSplash, setShowSplash] = useState(true);
   const [hoveredId, setHoveredId] = useState<string | null>(null);
 
   const pathname = usePathname();
@@ -66,55 +62,37 @@ export const HomeContent: FC = () => {
     }, 100);
   }
 
-  useEffect(() => {
-    if (showSplash) {
-      const timeout = setTimeout(() => setShowSplash(false), 2500);
-      return () => clearTimeout(timeout);
-    }
-  }, [showSplash]);
-
   return (
-    <>
-      {showSplash && <Splash show={showSplash} />}
-      <motion.div
-        className="mr-12 flex h-full gap-0"
-        animate={!showSplash && { opacity: 1 }}
-        transition={{
-          duration: 0.3,
-          delay: 0.2,
-        }}
-        initial={{ opacity: 0 }}
-      >
-        <Disciplines />
+    <div className="mr-12 flex h-full gap-0">
+      <Disciplines />
 
-        <div className="flex">
-          <Column size="medium">
-            {sortedPersonalities.map((personality) => (
-              <PersonalityItem
-                key={personality.id}
-                handleClick={() => handleSelect(personality.id)}
-                selected={personalityId === personality.id}
-                onMouseEnter={() => setHoveredId(personality.id)}
-                onMouseLeave={() => setHoveredId(null)}
-              >
-                {personality.name}
-              </PersonalityItem>
-            ))}
-          </Column>
+      <div className="flex">
+        <Column size="medium">
+          {sortedPersonalities.map((personality) => (
+            <PersonalityItem
+              key={personality.id}
+              handleClick={() => handleSelect(personality.id)}
+              selected={personalityId === personality.id}
+              onMouseEnter={() => setHoveredId(personality.id)}
+              onMouseLeave={() => setHoveredId(null)}
+            >
+              {personality.name}
+            </PersonalityItem>
+          ))}
+        </Column>
 
-          <div className="flex" ref={scrollToRef}>
-            {!!hoveredId || !!personalityId ? (
-              <Presentation
-                hideQuote={!!hoveredId || !personalityId}
-                personalityId={(hoveredId || personalityId) as string}
-              />
-            ) : null}
+        <div className="flex" ref={scrollToRef}>
+          {!!hoveredId || !!personalityId ? (
+            <Presentation
+              hideQuote={!!hoveredId || !personalityId}
+              personalityId={(hoveredId || personalityId) as string}
+            />
+          ) : null}
 
-            {projects ? <ProjectsContent projects={projects} /> : null}
-          </div>
+          {projects ? <ProjectsContent projects={projects} /> : null}
         </div>
-      </motion.div>
-    </>
+      </div>
+    </div>
   );
 };
 
