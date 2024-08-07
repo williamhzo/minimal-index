@@ -18,10 +18,8 @@ export const FooterLink: FC<FooterLinkProps> = ({ children, ...props }) => {
   return (
     <Link
       className={cn(
-        "border-b-[0.5px] border-background-light text-sm uppercase focus-within:border-background-boldest hover:text-content-medium focus:outline-none",
-        isActive
-          ? "border-background-boldest text-content-bold"
-          : "text-content-light",
+        "border-b-[0.5px] border-background-light text-sm uppercase hover:text-content-medium focus:outline-none",
+        isActive ? "text-content-bold" : "text-content-light",
       )}
       {...props}
     >
